@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-04-27T15:51:12 IST" name="Surefire suite" finished-at="2026-04-27T15:53:34 IST" duration-ms="141111">
+    <groups>
+    </groups>
+    <test started-at="2026-04-27T15:51:12 IST" name="Surefire test" finished-at="2026-04-27T15:53:34 IST" duration-ms="141111">
+      <class name="tests.RegisterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:12 IST" name="setUp" finished-at="2026-04-27T15:51:18 IST" duration-ms="5320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogoutUser()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:18 IST" name="testLogoutUser" description="TC8: Logout user" finished-at="2026-04-27T15:51:30 IST" duration-ms="12075" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogoutUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:30 IST" name="tearDown" finished-at="2026-04-27T15:51:33 IST" duration-ms="3230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:33 IST" name="setUp" finished-at="2026-04-27T15:51:37 IST" duration-ms="4313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterNewUserAndDeleteAccount()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:37 IST" name="testRegisterNewUserAndDeleteAccount" description="TC1: Register new user with valid details and delete account" finished-at="2026-04-27T15:51:51 IST" duration-ms="14062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterNewUserAndDeleteAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:51 IST" name="tearDown" finished-at="2026-04-27T15:51:55 IST" duration-ms="3185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:55 IST" name="setUp" finished-at="2026-04-27T15:51:59 IST" duration-ms="4781" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithEmptyEmail()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:51:59 IST" name="testRegisterWithEmptyEmail" description="TC5: Register with empty email should not proceed" finished-at="2026-04-27T15:52:01 IST" duration-ms="2069" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithEmptyEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:01 IST" name="tearDown" finished-at="2026-04-27T15:52:05 IST" duration-ms="3247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:05 IST" name="setUp" finished-at="2026-04-27T15:52:09 IST" duration-ms="4761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithEmptyName()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:09 IST" name="testRegisterWithEmptyName" description="TC4: Register with empty name should not proceed" finished-at="2026-04-27T15:52:12 IST" duration-ms="2696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithEmptyName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:12 IST" name="tearDown" finished-at="2026-04-27T15:52:16 IST" duration-ms="3312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:16 IST" name="setUp" finished-at="2026-04-27T15:52:18 IST" duration-ms="2536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithExistingEmail()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:18 IST" name="testRegisterWithExistingEmail" description="TC3: Register with existing email shows error" finished-at="2026-04-27T15:52:24 IST" duration-ms="6319" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:24 IST" name="tearDown" finished-at="2026-04-27T15:52:28 IST" duration-ms="3196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:28 IST" name="setUp" finished-at="2026-04-27T15:52:32 IST" duration-ms="4695" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithExistingEmailShowsError()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:32 IST" name="testRegisterWithExistingEmailShowsError" description="TC7: Register user with existing email shows error" finished-at="2026-04-27T15:52:49 IST" duration-ms="16356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithExistingEmailShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:49 IST" name="tearDown" finished-at="2026-04-27T15:52:52 IST" duration-ms="3288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:52 IST" name="setUp" finished-at="2026-04-27T15:52:57 IST" duration-ms="5373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithInvalidEmail()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:52:57 IST" name="testRegisterWithInvalidEmail" description="TC6: Register with invalid email format should not proceed" finished-at="2026-04-27T15:53:00 IST" duration-ms="2681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithInvalidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:53:00 IST" name="tearDown" finished-at="2026-04-27T15:53:03 IST" duration-ms="3219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:53:03 IST" name="setUp" finished-at="2026-04-27T15:53:08 IST" duration-ms="4895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithMrsTitle()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:53:08 IST" name="testRegisterWithMrsTitle" description="TC2: Register with Mrs title and verify account creation" finished-at="2026-04-27T15:53:30 IST" duration-ms="22203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithMrsTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@5276e6b0]" started-at="2026-04-27T15:53:30 IST" name="tearDown" finished-at="2026-04-27T15:53:34 IST" duration-ms="3231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RegisterTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

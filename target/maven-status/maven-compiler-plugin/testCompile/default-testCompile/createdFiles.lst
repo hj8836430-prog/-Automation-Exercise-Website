@@ -1,0 +1,8 @@
+pages\BasePage.class
+pages\ProductsPage.class
+pages\LoginPage.class
+pages\AccountCreatedPage.class
+pages\CartPage.class
+pages\HomePage.class
+utils\ExtentReportManager.class
+base\BaseTest.class
