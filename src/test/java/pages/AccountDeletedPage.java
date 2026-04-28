@@ -15,18 +15,29 @@ public class AccountDeletedPage extends BasePage {
 
     public boolean isAccountDeleted() {
         try {
-            // Wait for element to be visible
+            // Wait for element to be visible with multiple locator strategies
             wait.until(driver -> {
-                return driver.findElement(accountDeletedText).isDisplayed();
+                try {
+                    WebElement element = driver.findElement(accountDeletedText);
+                    if (element.isDisplayed()) return true;
+                } catch (Exception e) {}
+
+                try {
+                    WebElement altElement = driver.findElement(accountDeletedTextAlt);
+                    if (altElement.isDisplayed()) return true;
+                } catch (Exception e) {}
+
+                // Try additional locator
+                try {
+                    WebElement xpathElement = driver.findElement(By.xpath("//h2[contains(text(),'ACCOUNT DELETED')]"));
+                    if (xpathElement.isDisplayed()) return true;
+                } catch (Exception e) {}
+
+                return false;
             });
             return true;
         } catch (Exception e) {
-            // Fallback to alt locator
-            try {
-                return driver.findElement(accountDeletedTextAlt).isDisplayed();
-            } catch (Exception e2) {
-                return false;
-            }
+            return false;
         }
     }
 

@@ -83,4 +83,14 @@ public class BasePage {
         org.openqa.selenium.support.ui.Select select = new org.openqa.selenium.support.ui.Select(element);
         select.selectByVisibleText(text);
     }
+
+    // Scroll to bottom of page
+    public void scrollToBottom() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+    }
+
+    // Scroll to top of page
+    public void scrollToTop() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
+    }
 }

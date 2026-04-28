@@ -75,6 +75,20 @@ public class HomePage extends BasePage {
                 driver.get("https://www.automationexercise.com/products");
             }
         }
+
+        // Wait for products page to load
+        try {
+            wait.until(driver -> {
+                try {
+                    return driver.findElement(By.cssSelector(".features_items")).isDisplayed();
+                } catch (Exception ex) {
+                    return false;
+                }
+            });
+        } catch (Exception e) {
+            // Page might still be loaded, continue anyway
+        }
+
         return new ProductsPage(driver);
     }
 
@@ -97,7 +111,24 @@ public class HomePage extends BasePage {
     }
 
     public TestCasesPage clickTestCases() {
+        // Handle Google ad overlay if present
+        handleGoogleAdOverlay();
+
         click(testCasesLink);
+
+        // Wait for test cases page to load
+        try {
+            wait.until(driver -> {
+                try {
+                    return driver.findElement(By.cssSelector(".test-cases-table")).isDisplayed();
+                } catch (Exception ex) {
+                    return false;
+                }
+            });
+        } catch (Exception e) {
+            // Page might still be loaded, continue anyway
+        }
+
         return new TestCasesPage(driver);
     }
 
@@ -118,10 +149,22 @@ public class HomePage extends BasePage {
         click(deleteAccountLink);
         // Wait for page to load - check for account deleted heading
         try {
-            wait.until(driver -> driver.findElement(By.cssSelector("h2[data-qa='account-deleted']")).isDisplayed());
+            wait.until(driver -> {
+                try {
+                    WebElement element = driver.findElement(By.cssSelector("h2[data-qa='account-deleted']"));
+                    return element.isDisplayed();
+                } catch (Exception e) {
+                    try {
+                        WebElement altElement = driver.findElement(By.xpath("//h2[contains(text(),'ACCOUNT DELETED')]"));
+                        return altElement.isDisplayed();
+                    } catch (Exception e2) {
+                        return false;
+                    }
+                }
+            });
         } catch (Exception e) {
             // Fallback - just wait a bit for page load
-            try { Thread.sleep(2000); } catch (InterruptedException ie) {}
+            try { Thread.sleep(3000); } catch (InterruptedException ie) {}
         }
         return new AccountDeletedPage(driver);
     }
@@ -177,17 +220,6 @@ public class HomePage extends BasePage {
     public ProductsPage clickMenTshirtsCategory() {
         click(menTshirtsCategory);
         return new ProductsPage(driver);
-    }
-
-    // Scroll methods
-    public HomePage scrollToBottom() {
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-        return this;
-    }
-
-    public HomePage scrollToTop() {
-        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("window.scrollTo(0, 0);");
-        return this;
     }
 
     // Recommended items methods

@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run TestNG (automationexercise)",
+      "request": "launch",
+      "mainClass": "org.testng.TestNG",
+      "args": [
+        "C:/Users/viva/eclipse-workspace/automationexercise/testng.xml"
+      ],
+      "cwd": "C:/Users/viva/eclipse-workspace/automationexercise",
+      "console": "internalConsole"
+    }
+  ]
+}

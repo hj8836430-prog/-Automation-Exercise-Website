@@ -19,13 +19,43 @@ public class ProductsPage extends BasePage {
     private final By poloBrand = By.xpath("//div[@class='brands_products']//a[@href='/brand_products/Polo']");
     private final By hmBrand = By.xpath("//div[@class='brands_products']//a[@href='/brand_products/H&M']");
     private final By brandTitle = By.cssSelector(".title.text-center");
+    private final By featuresItems = By.cssSelector(".features_items");
 
     public ProductsPage(WebDriver driver) {
         super(driver);
+        // Handle any ad overlay on page load
+        handleAdOverlay();
     }
 
-    public int getProductCount() { return driver.findElements(productsList).size(); }
-    public boolean isProductsPageLoaded() { return isDisplayed(productsPageHeading); }
+    private void handleAdOverlay() {
+        try {
+            By adCloseBtn = By.cssSelector("[aria-label='Close ad'], .ad-close, #dismiss-button, .google-ad-close, .close-button");
+            if (isDisplayed(adCloseBtn)) {
+                click(adCloseBtn);
+                Thread.sleep(500);
+            }
+        } catch (Exception e) {
+            // Ad overlay not present or couldn't be closed
+        }
+    }
+
+    public int getProductCount() {
+        try {
+            return driver.findElements(productsList).size();
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
+    public boolean isProductsPageLoaded() {
+        // Check for features_items container or page heading
+        try {
+            if (isDisplayed(featuresItems)) {
+                return true;
+            }
+        } catch (Exception e) {}
+        return isDisplayed(productsPageHeading);
+    }
     public boolean isSearchResultsVisible() { return isDisplayed(searchedProductsHeading); }
 
     public ProductsPage searchProduct(String productName) {

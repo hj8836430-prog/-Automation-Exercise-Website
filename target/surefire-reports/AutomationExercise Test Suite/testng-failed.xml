@@ -4,13 +4,24 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Login Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="testLoginUserWithCorrectEmailAndPassword"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
   <test thread-count="5" name="Register Tests(failed)" verbose="0">
     <classes>
       <class name="tests.RegisterTest">
         <methods>
-          <include name="testRegisterWithExistingEmailShowsError"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testRegisterNewUserAndDeleteAccount"/>
         </methods>
       </class> <!-- tests.RegisterTest -->
     </classes>
@@ -26,4 +37,16 @@
       </class> <!-- tests.ContactTest -->
     </classes>
   </test> <!-- Contact Tests(failed) -->
+  <test thread-count="5" name="Products Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.ProductsTest">
+        <methods>
+          <include name="testNavigateToProductsPage"/>
+          <include name="setUp"/>
+          <include name="testSearchProduct"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.ProductsTest -->
+    </classes>
+  </test> <!-- Products Tests(failed) -->
 </suite> <!-- Failed suite [AutomationExercise Test Suite] -->
