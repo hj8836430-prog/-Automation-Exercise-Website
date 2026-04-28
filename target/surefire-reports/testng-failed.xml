@@ -22,6 +22,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="testRegisterNewUserAndDeleteAccount"/>
+          <include name="testRegisterWithMrsTitle"/>
         </methods>
       </class> <!-- tests.RegisterTest -->
     </classes>
@@ -41,7 +42,6 @@
     <classes>
       <class name="tests.ProductsTest">
         <methods>
-          <include name="testNavigateToProductsPage"/>
           <include name="setUp"/>
           <include name="testSearchProduct"/>
           <include name="tearDown"/>

@@ -1,12 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 16, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 351.4 s <<< FAILURE! -- in TestSuite
-tests.LoginTest.testLoginUserWithCorrectEmailAndPassword -- Time elapsed: 64.11 s <<< FAILURE!
-java.lang.AssertionError: 'ACCOUNT DELETED!' not visible expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
+Tests run: 16, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 302.4 s <<< FAILURE! -- in TestSuite
+tests.LoginTest.testLoginUserWithCorrectEmailAndPassword -- Time elapsed: 20.25 s <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problems: 
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+
+	at pages.AccountDeletedPage.isAccountDeleted(AccountDeletedPage.java:21)
 	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -41,11 +44,14 @@ java.lang.AssertionError: 'ACCOUNT DELETED!' not visible expected [true] but fou
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.RegisterTest.testRegisterNewUserAndDeleteAccount -- Time elapsed: 41.41 s <<< FAILURE!
-java.lang.AssertionError: Account deleted message not shown - verify you are on delete account page expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
+tests.RegisterTest.testRegisterNewUserAndDeleteAccount -- Time elapsed: 10.31 s <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problems: 
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+
+	at pages.AccountDeletedPage.isAccountDeleted(AccountDeletedPage.java:21)
 	at tests.RegisterTest.testRegisterNewUserAndDeleteAccount(RegisterTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -80,12 +86,15 @@ java.lang.AssertionError: Account deleted message not shown - verify you are on 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ContactTest.testVerifyTestCasesPage -- Time elapsed: 0.511 s <<< FAILURE!
-java.lang.AssertionError: User not navigated to test cases page successfully expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at tests.ContactTest.testVerifyTestCasesPage(ContactTest.java:40)
+tests.RegisterTest.testRegisterWithMrsTitle -- Time elapsed: 13.29 s <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problems: 
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+	WebElement cannot be resolved to a type
+
+	at pages.AccountDeletedPage.isAccountDeleted(AccountDeletedPage.java:21)
+	at tests.RegisterTest.testRegisterWithMrsTitle(RegisterTest.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,12 +128,21 @@ java.lang.AssertionError: User not navigated to test cases page successfully exp
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ProductsTest.testNavigateToProductsPage -- Time elapsed: 20.33 s <<< FAILURE!
-java.lang.AssertionError: Products page load nahi hui expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at tests.ProductsTest.testNavigateToProductsPage(ProductsTest.java:22)
+tests.ContactTest.testVerifyTestCasesPage -- Time elapsed: 20.39 s <<< FAILURE!
+java.lang.Error: 
+Unresolved compilation problems: 
+	By cannot be resolved to a type
+	By cannot be resolved
+	By cannot be resolved to a type
+	By cannot be resolved
+	By cannot be resolved to a type
+	By cannot be resolved to a type
+	WebElement cannot be resolved to a type
+	By cannot be resolved
+
+	at pages.TestCasesPage.<init>(TestCasesPage.java:7)
+	at pages.HomePage.clickTestCases(HomePage.java:132)
+	at tests.ContactTest.testVerifyTestCasesPage(ContactTest.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -158,12 +176,19 @@ java.lang.AssertionError: Products page load nahi hui expected [true] but found 
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-tests.ProductsTest.testSearchProduct -- Time elapsed: 20.45 s <<< FAILURE!
-java.lang.AssertionError: ALL PRODUCTS page pe nahi gaya expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at tests.ProductsTest.testSearchProduct(ProductsTest.java:35)
+tests.ProductsTest.testSearchProduct -- Time elapsed: 30.57 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.id: search_product (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59930}, goog:processID: 13664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59930/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cdc3452250b19750b3be9a67e41c0af8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pages.BasePage.type(BasePage.java:44)
+	at pages.ProductsPage.searchProduct(ProductsPage.java:62)
+	at tests.ProductsTest.testSearchProduct(ProductsTest.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
