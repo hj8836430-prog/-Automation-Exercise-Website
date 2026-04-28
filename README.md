@@ -1,20 +1,20 @@
 # Automation Exercise Selenium Framework
 
-Ye ek simple Selenium WebDriver framework hai jo AutomationExercise.com website ke liye test cases run karta hai.
+This is a simple Selenium WebDriver framework that runs test cases for the AutomationExercise.com website.
 
-## Project Structure (समझने के लिए)
+## Project Structure
 
 ```
 src/
 ├── test/
 │   ├── java/
 │   │   ├── base/           # Base classes (fundamental classes)
-│   │   │   └── BaseTest.java    # Browser setup aur teardown
+│   │   │   └── BaseTest.java    # Browser setup and teardown
 │   │   ├── pages/          # Page Object Model classes
 │   │   │   ├── BasePage.java    # Common Selenium methods
-│   │   │   ├── HomePage.java    # Home page ke elements aur actions
+│   │   │   ├── HomePage.java    # Home page elements and actions
 │   │   │   ├── LoginPage.java   # Login/Signup page
-│   │   │   └── ... (aur page classes)
+│   │   │   └── ... (other page classes)
 │   │   └── tests/          # Actual test classes
 │   │       ├── LoginTest.java   # Login related tests
 │   │       ├── ProductsTest.java # Product related tests
@@ -23,25 +23,25 @@ src/
 │       └── config.properties   # Configuration settings
 ```
 
-## Key Concepts (महत्वपूर्ण Concepts)
+## Key Concepts
 
 ### 1. Page Object Model (POM)
-- Har page ke liye alag class hai
-- Page ke saare elements aur actions ek jagah
-- Code maintain karna easy hota hai
+- Separate class for each page
+- All page elements and actions in one place
+- Easy to maintain code
 
 ### 2. Base Classes
 - `BasePage`: Common Selenium methods (click, type, wait, etc.)
 - `BaseTest`: Browser setup, config load, test lifecycle
 
 ### 3. Test Structure
-- `@Test` annotation se test methods mark ki gayi hai
-- `Assert` se results verify karte hai
-- Step-by-step comments add ki gayi hai
+- Test methods marked with `@Test` annotation
+- Results verified using `Assert`
+- Step-by-step comments added
 
-## Configuration (कॉन्फ़िगरेशन)
+## Configuration
 
-`config.properties` file me settings:
+Settings in `config.properties` file:
 ```
 browser=chrome
 baseUrl=http://automationexercise.com
@@ -49,19 +49,19 @@ implicitWait=10
 pageLoadTimeout=30
 ```
 
-## Test Cases Run Karne Ke Liye
+## Running Test Cases
 
-### Saare tests run karo:
+### Run all tests:
 ```bash
 mvn test
 ```
 
-### Specific test class run karo:
+### Run a specific test class:
 ```bash
 mvn test -Dtest=ProductsTest
 ```
 
-### Specific test method run karo:
+### Run a specific test method:
 ```bash
 mvn test -Dtest=ProductsTest#testNavigateToProductsPage
 ```
@@ -71,16 +71,16 @@ mvn test -Dtest=ProductsTest#testNavigateToProductsPage
 ```java
 @Test(description = "Simple test example")
 public void simpleTest() {
-    // 1. Home page check karo
+    // 1. Check home page
     HomePage home = new HomePage(driver);
-    Assert.assertTrue(home.isHomePageVisible(), "Home page nahi dikha");
+    Assert.assertTrue(home.isHomePageVisible(), "Home page not visible");
 
-    // 2. Products page pe jao
+    // 2. Navigate to products page
     ProductsPage products = home.clickProducts();
-    Assert.assertTrue(products.isProductsPageLoaded(), "Products page nahi load hua");
+    Assert.assertTrue(products.isProductsPageLoaded(), "Products page not loaded");
 
-    // 3. Check karo ki products hai
-    Assert.assertTrue(products.getProductCount() > 0, "Products nahi hai");
+    // 3. Check if products exist
+    Assert.assertTrue(products.getProductCount() > 0, "No products found");
 }
 ```
 
@@ -89,13 +89,13 @@ public void simpleTest() {
 - Firefox
 - Edge
 
-Browser change karne ke liye `config.properties` me `browser=firefox` set karo.
+To change browser, set `browser=firefox` in `config.properties`.
 
-## Understanding the Flow (Flow समझें)
+## Understanding the Flow
 
-1. **BaseTest** browser kholta hai aur website pe jata hai
-2. **Page classes** website ke elements ko control karte hai
-3. **Test classes** actual test logic contain karte hai
-4. **Assertions** check karte hai ki expected result mila ya nahi
+1. **BaseTest** opens the browser and navigates to the website
+2. **Page classes** control the website elements
+3. **Test classes** contain the actual test logic
+4. **Assertions** verify if the expected result is obtained
 
-Ye framework simple aur understandable banaya gaya hai taaki beginners easily samajh sake!
+This framework is designed to be simple and understandable so beginners can easily understand it!
