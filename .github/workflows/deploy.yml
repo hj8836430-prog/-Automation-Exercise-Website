@@ -30,14 +30,14 @@ jobs:
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
           cd /home/ec2-user
-          
-          # If folder doesn't exist → clone
-          if [ ! -d "-Automation-Exercise-Website" ]; then
+
+          # Clone if not exists
+          if [ ! -d "*Exercise*" ]; then
             git clone https://github.com/hj8836430-prog/-Automation-Exercise-Website.git
           fi
-          
-          cd -Automation-Exercise-Website
-          
+
+          cd *Exercise*
+
           git pull origin main
-          
+
           mvn clean install -DskipTests
