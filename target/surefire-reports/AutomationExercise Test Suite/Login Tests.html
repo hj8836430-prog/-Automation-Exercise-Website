@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 28 10:20:53 IST 2026</td>
+<td>Started on:</td><td>Tue Apr 28 15:45:46 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>58 seconds (58672 ms)</td>
+<tr><td>Total time:</td><td>67 seconds (67577 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,22 +77,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.LoginTest.testLoginUserWithCorrectEmailAndPassword()'><b>testLoginUserWithCorrectEmailAndPassword</b><br>Test class: tests.LoginTest<br>Test method: TC2: Login User with correct email and password</td>
-<td><div><pre>java.lang.Error: Unresolved compilation problems: 
-	WebElement cannot be resolved to a type
-	WebElement cannot be resolved to a type
-	WebElement cannot be resolved to a type
-
-	at pages.AccountDeletedPage.isAccountDeleted(AccountDeletedPage.java:21)
-	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:47)
+<td><div><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
+	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:33)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace884111637", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace884111637'><pre>java.lang.Error: Unresolved compilation problems: 
-	WebElement cannot be resolved to a type
-	WebElement cannot be resolved to a type
-	WebElement cannot be resolved to a type
-
-	at pages.AccountDeletedPage.isAccountDeleted(AccountDeletedPage.java:21)
-	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:47)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1977189075", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1977189075'><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:33)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -126,8 +119,8 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </pre></div></td>
-<td>20</td>
-<td>tests.LoginTest@6c284af</td></tr>
+<td>24</td>
+<td>tests.LoginTest@6440112d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -140,13 +133,13 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.LoginTest.testLoginWithInvalidCredentials()'><b>testLoginWithInvalidCredentials</b><br>Test class: tests.LoginTest<br>Test method: TC3: Login User with incorrect email and password</td>
 <td></td>
-<td>2</td>
-<td>tests.LoginTest@6c284af</td></tr>
+<td>3</td>
+<td>tests.LoginTest@6440112d</td></tr>
 <tr>
 <td title='tests.LoginTest.testLogout()'><b>testLogout</b><br>Test class: tests.LoginTest<br>Test method: TC4: Logout User</td>
 <td></td>
-<td>12</td>
-<td>tests.LoginTest@6c284af</td></tr>
+<td>14</td>
+<td>tests.LoginTest@6440112d</td></tr>
 </table><p>
 </body>
 </html>

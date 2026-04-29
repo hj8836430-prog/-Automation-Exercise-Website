@@ -1,0 +1,43 @@
+name: Java CI/CD Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Build with Maven
+      run: mvn clean install -DskipTests
+
+    - name: Deploy to EC2
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ secrets.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd /home/ec2-user
+          
+          # If folder doesn't exist → clone
+          if [ ! -d "-Automation-Exercise-Website" ]; then
+            git clone https://github.com/hj8836430-prog/-Automation-Exercise-Website.git
+          fi
+          
+          cd -Automation-Exercise-Website
+          
+          git pull origin main
+          
+          mvn clean install -DskipTests
