@@ -31,12 +31,17 @@ jobs:
         script: |
           cd /home/ec2-user
 
-          # Clone if not exists
-          if [ ! -d "*Exercise*" ]; then
-            git clone https://github.com/hj8836430-prog/-Automation-Exercise-Website.git
+          # Fix bad folder name once
+          if [ -d "-Automation-Exercise-Website" ]; then
+            mv "-Automation-Exercise-Website" app
           fi
 
-          cd *Exercise*
+          # Clone if not exists
+          if [ ! -d "app" ]; then
+            git clone https://github.com/hj8836430-prog/-Automation-Exercise-Website.git app
+          fi
+
+          cd app
 
           git pull origin main
 
