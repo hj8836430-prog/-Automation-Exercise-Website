@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-
         stage('Clone') {
             steps {
-                git 'https://github.com/hj8836430-prog/-Automation-Exercise-Website.git'
+                git branch: 'main', url: 'https://github.com/hj8836430-prog/-Automation-Exercise-Website.git'
             }
         }
 
@@ -23,11 +22,7 @@ pipeline {
 
         stage('Run Container') {
             steps {
-                sh '''
-                docker stop my-app-container || true
-                docker rm my-app-container || true
-                docker run -d -p 8081:8080 --name my-app-container my-app
-                '''
+                sh 'docker run -d -p 8081:8080 my-app'
             }
         }
     }
