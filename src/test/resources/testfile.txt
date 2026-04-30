@@ -1,2 +1,0 @@
-This is a test file for contact form upload test.
-Created for AutomationExercise testing purposes.
