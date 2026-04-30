@@ -1,6 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>automationexercise</groupId>
   <artifactId>automationexercise</artifactId>
   <version>0.0.1-SNAPSHOT</version>
@@ -10,21 +13,24 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <selenium.version>4.18.1</selenium.version>
-    <testng.version>7.9.0</testng.version>
+
+    <selenium.version>4.21.0</selenium.version>
+    <testng.version>7.10.2</testng.version>
     <webdrivermanager.version>5.7.0</webdrivermanager.version>
     <extentreports.version>5.1.1</extentreports.version>
+    <allure.version>2.24.0</allure.version>
   </properties>
 
   <dependencies>
-    <!-- Selenium WebDriver -->
+
+    <!-- Selenium -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>${selenium.version}</version>
     </dependency>
 
-    <!-- WebDriverManager - auto manages browser drivers -->
+    <!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
@@ -39,33 +45,51 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- ExtentReports for HTML reporting -->
+    <!-- Extent Reports -->
     <dependency>
       <groupId>com.aventstack</groupId>
       <artifactId>extentreports</artifactId>
       <version>${extentreports.version}</version>
     </dependency>
 
-    <!-- Apache Commons IO -->
+    <!-- Allure TestNG -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>${allure.version}</version>
+    </dependency>
+
+    <!-- Commons IO -->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.15.1</version>
     </dependency>
+
   </dependencies>
 
   <build>
     <plugins>
+
+      <!-- Maven Surefire Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
+
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+
+          <!-- Allure results path -->
+          <systemPropertyVariables>
+            <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
+
 </project>
