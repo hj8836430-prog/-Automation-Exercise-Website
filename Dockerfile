@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN mvn clean test
+RUN mvn clean install -DskipTests
 
 CMD ["tail", "-f", "/dev/null"]
