@@ -5,3 +5,5 @@ WORKDIR /app
 COPY . .
 
 RUN mvn clean test
+
+CMD ["tail", "-f", "/dev/null"]
