@@ -21,6 +21,6 @@ COPY . .
 
 # Build project
 RUN mvn clean install -DskipTests
-
+    
 # Run tests
 CMD ["mvn", "test"]
