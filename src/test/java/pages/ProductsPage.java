@@ -72,19 +72,26 @@ public class ProductsPage extends BasePage {
     }
 
     public ProductsPage clickAddToCart(int index) {
+        By productWrapper = By.cssSelector(
+            ".features_items .product-image-wrapper:nth-child(" + index + ")");
         By addToCartBtnLocator = By.cssSelector(
             ".features_items .product-image-wrapper:nth-child(" + index + ") button[data-qa='add-to-cart']");
+
         try {
-            // First try the specific product
-            click(addToCartBtnLocator);
+            // Hover over the product to make the 'Add to Cart' button visible
+            hoverOver(productWrapper);
+            // Small sleep to let the animation/hover effect complete
+            try { Thread.sleep(500); } catch (InterruptedException ie) {}
+
+            // Try JavaScript click directly on the specific button to avoid visibility/intercept issues
+            WebElement btn = driver.findElement(addToCartBtnLocator);
+            jsClick(btn);
         } catch (Exception e) {
             try {
-                // Fallback: try clicking the first add to cart button visible
+                // Fallback: try clicking any add to cart button
                 click(By.cssSelector("button[data-qa='add-to-cart']"));
             } catch (Exception e2) {
-                // Last resort: try JavaScript click
-                WebElement element = driver.findElement(By.cssSelector("button[data-qa='add-to-cart']"));
-                jsClick(element);
+                throw e;
             }
         }
         return this;

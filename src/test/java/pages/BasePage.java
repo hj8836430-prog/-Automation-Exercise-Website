@@ -60,6 +60,13 @@ public class BasePage {
         }
     }
 
+    // Hover over an element
+    protected void hoverOver(By locator) {
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+        org.openqa.selenium.interactions.Actions actions = new org.openqa.selenium.interactions.Actions(driver);
+        actions.moveToElement(element).perform();
+    }
+
     // JavaScript click (for stubborn elements)
     protected void jsClick(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
