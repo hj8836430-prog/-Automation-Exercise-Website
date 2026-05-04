@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testVerifyProductQuantityInCart"/>
+          <include name="testPlaceOrderRegisterBeforeCheckout"/>
         </methods>
       </class> <!-- tests.ProductsTest -->
     </classes>

@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.ProductsTest" class="method navigator-link" hash-for-method="testVerifyProductQuantityInCart">testVerifyProductQuantityInCart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.ProductsTest" class="method navigator-link" hash-for-method="testPlaceOrderRegisterBeforeCheckout">testPlaceOrderRegisterBeforeCheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -126,16 +126,36 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testVerifyProductQuantityInCart">
-                  </a> <!-- testVerifyProductQuantityInCart -->
-                  <span class="method-name">testVerifyProductQuantityInCart</span>
-                  <div class="stack-trace">java.lang.AssertionError: Cart me quantity 4 nahi hai. Actual found: Rs. 2000 expected [true] but found [false]
-	at tests.ProductsTest.testVerifyProductQuantityInCart(ProductsTest.java:158)
+                  <a name="testPlaceOrderRegisterBeforeCheckout">
+                  </a> <!-- testPlaceOrderRegisterBeforeCheckout -->
+                  <span class="method-name">testPlaceOrderRegisterBeforeCheckout</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;product-image-wrapper&apos;)][1]//button[@data-qa=&apos;add-to-cart&apos;]&quot;}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ad67af2c95f39d4832a0a75c5f0bec1, findElement {value=//div[contains(@class,&apos;product-image-wrapper&apos;)][1]//button[@data-qa=&apos;add-to-cart&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52240}, goog:processID: 5728, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52240/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ad67af2c95f39d4832a0a75c5f0bec1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.ProductsPage.clickAddToCart(ProductsPage.java:91)
+	at tests.ProductsTest.testPlaceOrderRegisterBeforeCheckout(ProductsTest.java:257)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames
+... Removed 37 stack frames
 </div> <!-- stack-trace -->
                   <em>
-(TC13: Verify Product quantity in Cart)                  </em>
+(TC15: Place Order: Register before Checkout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -198,14 +218,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testVerifyProductQuantityInCart')
+data.setCell(0, 1, 'testPlaceOrderRegisterBeforeCheckout')
 data.setCell(0, 2, 'tests.ProductsTest')
-data.setCell(0, 3, 26782);
+data.setCell(0, 3, 61691);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -226,8 +246,6 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">tests.ProductsTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">testPlaceOrderRegisterBeforeCheckout</span>
-                <br/>
                 <span class="ignored-method-name">testScrollUpWithoutArrowButton</span>
                 <br/>
                 <span class="ignored-method-name">testAddProductToCart</span>
@@ -249,6 +267,8 @@ return data;
                 <span class="ignored-method-name">testCheckoutAndPlaceOrder</span>
                 <br/>
                 <span class="ignored-method-name">testViewProductDetails</span>
+                <br/>
+                <span class="ignored-method-name">testVerifyProductQuantityInCart</span>
                 <br/>
                 <span class="ignored-method-name">testRemoveProductsFromCart</span>
                 <br/>
@@ -280,12 +300,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testVerifyProductQuantityInCart</span>
-                <span class="method-start">7843 ms</span>
+                <span class="method-name">testPlaceOrderRegisterBeforeCheckout</span>
+                <span class="method-start">5566 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34637 ms</span>
+                <span class="method-start">67276 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
