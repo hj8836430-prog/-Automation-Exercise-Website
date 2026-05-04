@@ -6,8 +6,8 @@
       <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
-          <include name="testAddProductToCart"/>
           <include name="tearDown"/>
+          <include name="testVerifyProductQuantityInCart"/>
         </methods>
       </class> <!-- tests.ProductsTest -->
     </classes>

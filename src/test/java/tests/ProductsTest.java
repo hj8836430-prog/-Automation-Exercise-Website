@@ -147,11 +147,15 @@ public class ProductsTest extends BaseTest {
         // 'View Cart' button click karo
         CartPage cart = detail.clickViewCartFromModal();
 
-        // Check karo ki product cart me exact quantity 4 ke saath hai
+        // Check karo ki product cart me add hua
         Assert.assertEquals(cart.getCartProductCount(), 1, "Product cart me add nahi hua");
         java.util.List<String> quantities = cart.getCartQuantities();
         Assert.assertTrue(quantities.size() > 0, "Cart me quantity information nahi mili");
-        Assert.assertTrue(quantities.get(0).contains("4") || quantities.get(0).equals("4"), "Cart me quantity 4 nahi hai");
+
+        String actualQuantity = quantities.get(0).trim();
+        System.out.println("Debug: Actual quantity in cart: '" + actualQuantity + "'");
+
+        Assert.assertTrue(actualQuantity.contains("4"), "Cart me quantity 4 nahi hai. Actual found: " + actualQuantity);
     }
 
     // Test Case 14: Checkout ke time Register karo aur Order place karo
