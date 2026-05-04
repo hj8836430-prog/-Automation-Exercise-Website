@@ -252,13 +252,11 @@ public class ProductsTest extends BaseTest {
         // Verify 'Logged in as username' at top
         Assert.assertTrue(loggedIn.isLoggedIn(), "'Logged in as username' not visible");
 
-        // Add products to cart
+        // Add products to cart via Product Detail Page (More stable than hover)
         ProductsPage products = loggedIn.clickProducts();
-        products.clickAddToCart(1);
-        products.clickContinueShopping();
-
-        // Click 'Cart' button
-        CartPage cart = loggedIn.clickCart();
+        ProductDetailPage detail = products.clickViewProduct(1);
+        detail.clickAddToCart();
+        CartPage cart = detail.clickViewCartFromModal();
 
         // Verify that cart page is displayed
         Assert.assertTrue(cart.getCartProductCount() > 0, "Cart page not displayed");
