@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProductsPage extends BasePage {
 
@@ -72,23 +73,26 @@ public class ProductsPage extends BasePage {
     }
 
     public ProductsPage clickAddToCart(int index) {
-        By productWrapper = By.cssSelector(
-            ".features_items .product-image-wrapper:nth-child(" + index + ")");
-        By addToCartBtnLocator = By.cssSelector(
-            ".features_items .product-image-wrapper:nth-child(" + index + ") button[data-qa='add-to-cart']");
+        // Using a more robust XPath to find the Add to Cart button within the specific product wrapper
+        By productWrapper = By.cssSelector(".features_items .product-image-wrapper:nth-child(" + index + ")");
+        By addToCartBtnLocator = By.xpath("//div[contains(@class,'product-image-wrapper')][" + index + "]//button[@data-qa='add-to-cart']");
 
         try {
-            // Hover over the product to make the 'Add to Cart' button visible
-            hoverOver(productWrapper);
-            // Small sleep to let the animation/hover effect complete
-            try { Thread.sleep(500); } catch (InterruptedException ie) {}
+            // Ensure we are on the products page and elements are present
+            wait.until(ExpectedConditions.visibilityOfElementLocated(productWrapper));
 
-            // Try JavaScript click directly on the specific button to avoid visibility/intercept issues
+            // Hover over the product to trigger the button visibility
+            hoverOver(productWrapper);
+
+            // Give it a moment to appear
+            try { Thread.sleep(1000); } catch (InterruptedException ie) {}
+
+            // Use JavaScript click as it's the most reliable for these types of hover-buttons
             WebElement btn = driver.findElement(addToCartBtnLocator);
             jsClick(btn);
         } catch (Exception e) {
             try {
-                // Fallback: try clicking any add to cart button
+                // Final fallback: try to find any add-to-cart button if the indexed one fails
                 click(By.cssSelector("button[data-qa='add-to-cart']"));
             } catch (Exception e2) {
                 throw e;
