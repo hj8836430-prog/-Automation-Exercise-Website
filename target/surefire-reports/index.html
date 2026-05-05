@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Surefire_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.ProductsTest" class="method navigator-link" hash-for-method="testPlaceOrderRegisterBeforeCheckout">testPlaceOrderRegisterBeforeCheckout</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.PlaceOrderRegisterCheckoutTest" class="method navigator-link" hash-for-method="testPlaceOrderRegisterWhileCheckout">testPlaceOrderRegisterWhileCheckout</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -121,21 +121,39 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tests.ProductsTest</span>
+              <span class="class-name">tests.PlaceOrderRegisterCheckoutTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testPlaceOrderRegisterBeforeCheckout">
-                  </a> <!-- testPlaceOrderRegisterBeforeCheckout -->
-                  <span class="method-name">testPlaceOrderRegisterBeforeCheckout</span>
-                  <div class="stack-trace">java.lang.AssertionError: Success message not visible expected [true] but found [false]
-	at tests.ProductsTest.testPlaceOrderRegisterBeforeCheckout(ProductsTest.java:281)
+                  <a name="testPlaceOrderRegisterWhileCheckout">
+                  </a> <!-- testPlaceOrderRegisterWhileCheckout -->
+                  <span class="method-name">testPlaceOrderRegisterWhileCheckout</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(@class,&apos;product-image-wrapper&apos;)][1]//button[@data-qa=&apos;add-to-cart&apos;]&quot;}
+  (Session info: chrome=147.0.7727.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c6cf65067a64d180b04044c692c161d3, findElement {value=//div[contains(@class,&apos;product-image-wrapper&apos;)][1]//button[@data-qa=&apos;add-to-cart&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50929}, goog:processID: 4800, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50929/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c6cf65067a64d180b04044c692c161d3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at pages.ProductsPage.clickAddToCart(ProductsPage.java:81)
+	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:25)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 35 stack frames
+... Removed 37 stack frames
 </div> <!-- stack-trace -->
-                  <em>
-(TC15: Place Order: Register before Checkout)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -150,13 +168,8 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
-    &lt;method-selectors&gt;
-      &lt;method-selector&gt;
-        &lt;selector-class name=&quot;org.apache.maven.surefire.testng.utils.MethodSelector&quot; priority=&quot;10000&quot;/&gt;
-      &lt;/method-selector&gt;
-    &lt;/method-selectors&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.ProductsTest&quot;/&gt;
+      &lt;class name=&quot;tests.PlaceOrderRegisterCheckoutTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -198,14 +211,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testPlaceOrderRegisterBeforeCheckout')
-data.setCell(0, 2, 'tests.ProductsTest')
-data.setCell(0, 3, 73230);
+data.setCell(0, 1, 'testPlaceOrderRegisterWhileCheckout')
+data.setCell(0, 2, 'tests.PlaceOrderRegisterCheckoutTest')
+data.setCell(0, 3, 58915);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 58 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -220,50 +233,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">18 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">tests.ProductsTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testScrollUpWithoutArrowButton</span>
-                <br/>
-                <span class="ignored-method-name">testAddProductToCart</span>
-                <br/>
-                <span class="ignored-method-name">testSearchProductsAndVerifyCartAfterLogin</span>
-                <br/>
-                <span class="ignored-method-name">testDownloadInvoiceAfterPurchaseOrder</span>
-                <br/>
-                <span class="ignored-method-name">testNavigateToProductsPage</span>
-                <br/>
-                <span class="ignored-method-name">testScrollUpUsingArrowButton</span>
-                <br/>
-                <span class="ignored-method-name">testViewCartBrandProducts</span>
-                <br/>
-                <span class="ignored-method-name">testSearchProduct</span>
-                <br/>
-                <span class="ignored-method-name">testVerifySubscriptionInCartPage</span>
-                <br/>
-                <span class="ignored-method-name">testCheckoutAndPlaceOrder</span>
-                <br/>
-                <span class="ignored-method-name">testViewProductDetails</span>
-                <br/>
-                <span class="ignored-method-name">testVerifyProductQuantityInCart</span>
-                <br/>
-                <span class="ignored-method-name">testRemoveProductsFromCart</span>
-                <br/>
-                <span class="ignored-method-name">testAddReviewOnProduct</span>
-                <br/>
-                <span class="ignored-method-name">testPlaceOrderLoginBeforeCheckout</span>
-                <br/>
-                <span class="ignored-method-name">testAddToCartFromRecommendedItems</span>
-                <br/>
-                <span class="ignored-method-name">testViewCategoryProducts</span>
-                <br/>
-                <span class="ignored-method-name">testVerifyAddressDetailsInCheckoutPage</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Surefire_suite" class="panel">
@@ -272,7 +244,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.ProductsTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.PlaceOrderRegisterCheckoutTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -280,12 +252,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testPlaceOrderRegisterBeforeCheckout</span>
-                <span class="method-start">12834 ms</span>
+                <span class="method-name">testPlaceOrderRegisterWhileCheckout</span>
+                <span class="method-start">6428 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">86080 ms</span>
+                <span class="method-start">65367 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

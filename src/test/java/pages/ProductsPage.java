@@ -73,21 +73,11 @@ public class ProductsPage extends BasePage {
     }
 
     public ProductsPage clickAddToCart(int index) {
-        // Using a more robust XPath to find the Add to Cart button within the specific product wrapper
-        By productWrapper = By.cssSelector(".features_items .product-image-wrapper:nth-child(" + index + ")");
+        // Use a more robust XPath to find the Add to Cart button within the specific product wrapper
         By addToCartBtnLocator = By.xpath("//div[contains(@class,'product-image-wrapper')][" + index + "]//button[@data-qa='add-to-cart']");
 
         try {
-            // Ensure we are on the products page and elements are present
-            wait.until(ExpectedConditions.visibilityOfElementLocated(productWrapper));
-
-            // Hover over the product to trigger the button visibility
-            hoverOver(productWrapper);
-
-            // Give it a moment to appear
-            try { Thread.sleep(1000); } catch (InterruptedException ie) {}
-
-            // Use JavaScript click as it's the most reliable for these types of hover-buttons
+            // Use JavaScript click directly as it doesn't require visibility/interactability checks that often fail with hover-menus
             WebElement btn = driver.findElement(addToCartBtnLocator);
             jsClick(btn);
         } catch (Exception e) {

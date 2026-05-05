@@ -171,7 +171,12 @@ public class HomePage extends BasePage {
 
     // Home page check
     public boolean isHomePageVisible() {
-        return isDisplayed(homeSlider);
+        try {
+            return isDisplayed(homeSlider);
+        } catch (Exception e) {
+            // Fallback to checking for other home page elements if slider is not immediately visible
+            return isDisplayed(fullFledgedText);
+        }
     }
 
     // Subscription methods
