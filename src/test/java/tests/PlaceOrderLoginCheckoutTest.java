@@ -15,7 +15,7 @@ public class PlaceOrderLoginCheckoutTest extends BaseTest {
         Assert.assertTrue(homePage.isHomePageVisible(), "Home page should be visible");
 
         // 3. Click 'Signup / Login' button
-        LoginPage loginPage = homePage.clickLogin();
+        LoginPage loginPage = homePage.clickSignupLogin();
 
         // 4. Fill email, password and click 'Login' button
         // Note: In a real scenario, these credentials would come from a pre-existing user
@@ -33,18 +33,20 @@ public class PlaceOrderLoginCheckoutTest extends BaseTest {
         String password = "Password123!";
 
         // Pre-requisite: Create account so we can login
-        homePage.clickLogin().signup("Test User", email);
+        homePage.clickSignupLogin().signup("Test User", email);
         new RegisterPage(driver)
             .selectTitle("Mr")
             .enterPassword(password)
-            .selectDateOfBirth("10", "May", "1990")
+            .selectDateOfBirth("10", "5", "1990")
             .selectNewsletter()
             .selectOffers()
-            .fillAddressDetails("First", "Last", "Company", "Address", "USA", "State", "City", "12345", "1234567890")
+            .fillAddressDetails("First", "Last", "Company", "Address", "United States", "State", "City", "12345", "1234567890")
             .clickCreateAccount();
 
         // Now follow Test Case 16 steps
-        loginPage = homePage.clickLogin();
+        // Re-initialize homePage because clickCreateAccount returns a new HomePage or keeps current driver
+        homePage = new HomePage(driver);
+        loginPage = homePage.clickSignupLogin();
         loginPage.login(email, password);
         homePage = new HomePage(driver);
 

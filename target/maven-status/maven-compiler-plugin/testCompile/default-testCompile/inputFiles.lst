@@ -15,8 +15,10 @@ C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\pages\RegisterP
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\pages\TestCasesPage.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\ContactTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\LoginTest.java
+C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\PlaceOrderLoginCheckoutTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\PlaceOrderRegisterCheckoutTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\ProductsTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\RegisterTest.java
+C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\RemoveProductsFromCartTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\tests\SubscriptionTest.java
 C:\Users\viva\eclipse-workspace\automationexercise\src\test\java\utils\ExtentReportManager.java

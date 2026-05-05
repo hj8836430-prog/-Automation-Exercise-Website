@@ -3,13 +3,13 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.PlaceOrderRegisterCheckoutTest">
+      <class name="tests.PlaceOrderLoginCheckoutTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testPlaceOrderRegisterWhileCheckout"/>
+          <include name="testPlaceOrderLoginBeforeCheckout"/>
         </methods>
-      </class> <!-- tests.PlaceOrderRegisterCheckoutTest -->
+      </class> <!-- tests.PlaceOrderLoginCheckoutTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

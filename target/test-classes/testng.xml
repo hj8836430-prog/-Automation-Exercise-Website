@@ -25,6 +25,19 @@
         </classes>
     </test>
 
+    <test name="Place Order Tests">
+        <classes>
+            <class name="tests.PlaceOrderLoginCheckoutTest"/>
+            <class name="tests.PlaceOrderRegisterCheckoutTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Tests">
+        <classes>
+            <class name="tests.RemoveProductsFromCartTest"/>
+        </classes>
+    </test>
+
     <test name="Products Tests">
         <classes>
             <class name="tests.ProductsTest">
