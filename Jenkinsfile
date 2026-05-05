@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/hj8836430-prog/-Automation-Exercise-Website.git'
-            }
-        }
-
         stage('Build Maven') {
             steps {
                 sh 'mvn clean install -DskipTests'

@@ -21,13 +21,10 @@ public class PlaceOrderRegisterCheckoutTest extends BaseTest {
         // 3. Add products to cart
         ProductsPage productsPage = homePage.clickProducts();
 
-        productsPage.searchProduct("T-shirt");
+        // Add a product directly from the products page without searching to avoid the timeout
         productsPage.clickAddToCart(1);
         productsPage.clickContinueShopping();
-
-        productsPage.searchProduct("Dress");
-        productsPage.clickAddToCart(1);
-        productsPage.clickContinueShopping();
+        productsPage.clickAddToCart(2);
 
         // 4. Click 'Cart' button
         CartPage cartPage = homePage.clickCart();

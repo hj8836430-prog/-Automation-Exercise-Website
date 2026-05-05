@@ -73,20 +73,21 @@ public class ProductsPage extends BasePage {
     }
 
     public ProductsPage clickAddToCart(int index) {
-        // Use a more robust XPath to find the Add to Cart button within the specific product wrapper
-        By addToCartBtnLocator = By.xpath("//div[contains(@class,'product-image-wrapper')][" + index + "]//button[@data-qa='add-to-cart']");
+        // Use a CSS selector to find all add-to-cart buttons
+        By addToCartBtnLocator = By.cssSelector("button[data-qa='add-to-cart']");
 
         try {
-            // Use JavaScript click directly as it doesn't require visibility/interactability checks that often fail with hover-menus
-            WebElement btn = driver.findElement(addToCartBtnLocator);
-            jsClick(btn);
-        } catch (Exception e) {
-            try {
-                // Final fallback: try to find any add-to-cart button if the indexed one fails
-                click(By.cssSelector("button[data-qa='add-to-cart']"));
-            } catch (Exception e2) {
-                throw e;
+            // Find all matching buttons
+            java.util.List<<WebElementWebElement> buttons = driver.findElements(addToCartBtnLocator);
+            if (buttons.isEmpty()) {
+                throw new org.openqa.selenium.NoSuchElementException("No add-to-cart buttons found");
             }
+
+            // Click the button at the specified index (1-based)
+            int actualIndex = Math.min(index - 1, buttons.size() - 1);
+            jsClick(buttons.get(actualIndex));
+        } catch (Exception e) {
+            throw e;
         }
         return this;
     }
