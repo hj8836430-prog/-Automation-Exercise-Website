@@ -3,7 +3,10 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 public class ProductsPage extends BasePage {
 
@@ -24,7 +27,6 @@ public class ProductsPage extends BasePage {
 
     public ProductsPage(WebDriver driver) {
         super(driver);
-        // Handle any ad overlay on page load
         handleAdOverlay();
     }
 
@@ -36,7 +38,7 @@ public class ProductsPage extends BasePage {
                 Thread.sleep(500);
             }
         } catch (Exception e) {
-            // Ad overlay not present or couldn't be closed
+            // Ignore if not present
         }
     }
 
@@ -49,15 +51,19 @@ public class ProductsPage extends BasePage {
     }
 
     public boolean isProductsPageLoaded() {
-        // Check for features_items container or page heading
         try {
             if (isDisplayed(featuresItems)) {
                 return true;
             }
-        } catch (Exception e) {}
+        } catch (Exception e) {
+            // ignore
+        }
         return isDisplayed(productsPageHeading);
     }
-    public boolean isSearchResultsVisible() { return isDisplayed(searchedProductsHeading); }
+
+    public boolean isSearchResultsVisible() {
+        return isDisplayed(searchedProductsHeading);
+    }
 
     public ProductsPage searchProduct(String productName) {
         type(searchInput, productName);
@@ -67,25 +73,22 @@ public class ProductsPage extends BasePage {
 
     public ProductDetailPage clickViewProduct(int index) {
         By viewProductLink = By.cssSelector(
-            ".features_items .product-image-wrapper:nth-child(" + index + ") a[href*='product_details']");
+                ".features_items .product-image-wrapper:nth-child(" + index + ") a[href*='product_details']");
         click(viewProductLink);
         return new ProductDetailPage(driver);
     }
 
     public ProductsPage clickAddToCart(int index) {
-        // Use a CSS selector to find all add-to-cart buttons
-        By addToCartBtnLocator = By.cssSelector("button[data-qa='add-to-cart']");
-
         try {
-            // Find all matching buttons
-            java.util.List<<WebElementWebElement> buttons = driver.findElements(addToCartBtnLocator);
+            List<WebElement> buttons = driver.findElements(addToCartBtn);
+
             if (buttons.isEmpty()) {
-                throw new org.openqa.selenium.NoSuchElementException("No add-to-cart buttons found");
+                throw new NoSuchElementException("No add-to-cart buttons found");
             }
 
-            // Click the button at the specified index (1-based)
             int actualIndex = Math.min(index - 1, buttons.size() - 1);
             jsClick(buttons.get(actualIndex));
+
         } catch (Exception e) {
             throw e;
         }
@@ -102,9 +105,25 @@ public class ProductsPage extends BasePage {
         return new CartPage(driver);
     }
 
-    public String getCategoryTitle() { return getText(categoryTitle); }
-    public boolean areBrandsVisible() { return isDisplayed(brandsSection); }
-    public ProductsPage clickPoloBrand() { click(poloBrand); return this; }
-    public ProductsPage clickHmBrand() { click(hmBrand); return this; }
-    public String getBrandTitle() { return getText(brandTitle); }
+    public String getCategoryTitle() {
+        return getText(categoryTitle);
+    }
+
+    public boolean areBrandsVisible() {
+        return isDisplayed(brandsSection);
+    }
+
+    public ProductsPage clickPoloBrand() {
+        click(poloBrand);
+        return this;
+    }
+
+    public ProductsPage clickHmBrand() {
+        click(hmBrand);
+        return this;
+    }
+
+    public String getBrandTitle() {
+        return getText(brandTitle);
+    }
 }
