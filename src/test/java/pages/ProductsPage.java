@@ -126,4 +126,4 @@ public class ProductsPage extends BasePage {
     public String getBrandTitle() {
         return getText(brandTitle);
     }
-}
+}   
