@@ -15,7 +15,7 @@ public class ProductsPage extends BasePage {
     private final By searchButton = By.id("submit_search");
     private final By productsPageHeading = By.xpath("//h2[contains(text(),'Product') or contains(text(),'All') or contains(text(),'product')]");
     private final By searchedProductsHeading = By.xpath("//h2[text()='Searched Products']");
-    private final By addToCartBtn = By.cssSelector("button[data-qa='add-to-cart']");
+    private final By addToCartBtn = By.cssSelector(".add-to-cart");
     private final By continueShoppingBtn = By.cssSelector(".modal-footer .btn-success");
     private final By viewCartBtn = By.cssSelector(".modal-body a[href='/view_cart']");
     private final By categoryTitle = By.cssSelector(".title.text-center");
