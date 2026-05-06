@@ -30,6 +30,7 @@ public class HomePage extends BasePage {
     private final By categoriesSection = By.cssSelector("#accordian");
     private final By womenCategory = By.xpath("//div[@id='accordian']//a[@href='#Women']");
     private final By womenDressCategory = By.xpath("//div[@id='Women']//a[@href='/category_products/1']");
+    private final By womenTopsCategory = By.xpath("//div[@id='Women']//a[@href='/category_products/2']");
     private final By menCategory = By.xpath("//div[@id='accordian']//a[@href='#Men']");
     private final By menTshirtsCategory = By.xpath("//div[@id='Men']//a[@href='/category_products/3']");
 
@@ -214,6 +215,11 @@ public class HomePage extends BasePage {
 
     public ProductsPage clickWomenDressCategory() {
         click(womenDressCategory);
+        return new ProductsPage(driver);
+    }
+
+    public ProductsPage clickWomenTopsCategory() {
+        click(womenTopsCategory);
         return new ProductsPage(driver);
     }
 
