@@ -1,7 +1,6 @@
 
 FROM maven:3.9.9-eclipse-temurin-17
 
-# Install Google Chrome (optimized)
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
@@ -17,15 +16,13 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Copy pom.xml first for Maven dependency caching
 COPY pom.xml .
 
-# Download dependencies only once
 RUN mvn dependency:go-offline
 
-# Copy project files
 COPY . .
 
-# Default command
-CMD ["mvn", "test"]
+RUN mvn clean install -DskipTests
+
+CMD sh -c "mvn test; tail -f /dev/null"
 

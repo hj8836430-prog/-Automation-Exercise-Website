@@ -1,5 +1,10 @@
+```groovy id="w7m2k9"
 pipeline {
     agent any
+
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+    }
 
     stages {
 
@@ -11,14 +16,25 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t automation-test .'
+                sh 'docker build --cache-from automation-test -t automation-test .'
+            }
+        }
+
+        stage('Remove Old Container') {
+            steps {
+                sh 'docker rm -f test-container || true'
             }
         }
 
         stage('Run Container') {
             steps {
-                sh 'docker rm -f test-container || true'
                 sh 'docker run -d --name test-container automation-test'
+            }
+        }
+
+        stage('Verify Container Running') {
+            steps {
+                sh 'docker ps'
             }
         }
 
@@ -28,4 +44,15 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
 }
+```
