@@ -1,25 +1,595 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="19" passed="13" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-06T11:38:47 IST" name="Surefire suite" finished-at="2026-05-06T11:39:29 IST" duration-ms="41685">
+  <suite started-at="2026-05-07T16:21:24 IST" name="AutomationExercise Test Suite" finished-at="2026-05-07T16:28:54 IST" duration-ms="449207">
     <groups>
     </groups>
-    <test started-at="2026-05-06T11:38:47 IST" name="Surefire test" finished-at="2026-05-06T11:39:29 IST" duration-ms="41685">
-      <class name="tests.ViewCategoryProductsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ViewCategoryProductsTest@2ea41516]" started-at="2026-05-06T11:38:47 IST" name="setUp" finished-at="2026-05-06T11:38:53 IST" duration-ms="5609" status="PASS">
+    <test started-at="2026-05-07T16:21:24 IST" name="Login Tests" finished-at="2026-05-07T16:22:31 IST" duration-ms="67074">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:21:24 IST" name="setUp" finished-at="2026-05-07T16:21:32 IST" duration-ms="7652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testViewCategoryProducts()[pri:0, instance:tests.ViewCategoryProductsTest@2ea41516]" started-at="2026-05-06T11:38:53 IST" name="testViewCategoryProducts" finished-at="2026-05-06T11:39:29 IST" duration-ms="35746" status="PASS">
+        <test-method signature="testLoginUserWithCorrectEmailAndPassword()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:21:32 IST" name="testLoginUserWithCorrectEmailAndPassword" description="TC2: Login User with correct email and password" finished-at="2026-05-07T16:21:57 IST" duration-ms="25033" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testViewCategoryProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ViewCategoryProductsTest@2ea41516]" started-at="2026-05-06T11:39:29 IST" name="tearDown" finished-at="2026-05-06T11:39:29 IST" duration-ms="188" status="PASS">
+        </test-method> <!-- testLoginUserWithCorrectEmailAndPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:21:57 IST" name="tearDown" finished-at="2026-05-07T16:21:58 IST" duration-ms="599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.ViewCategoryProductsTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:21:58 IST" name="setUp" finished-at="2026-05-07T16:22:02 IST" duration-ms="4314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginWithInvalidCredentials()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:22:02 IST" name="testLoginWithInvalidCredentials" description="TC3: Login User with incorrect email and password" finished-at="2026-05-07T16:22:06 IST" duration-ms="3511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:22:06 IST" name="tearDown" finished-at="2026-05-07T16:22:06 IST" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:22:06 IST" name="setUp" finished-at="2026-05-07T16:22:11 IST" duration-ms="4589" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogout()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:22:11 IST" name="testLogout" description="TC4: Logout User" finished-at="2026-05-07T16:22:31 IST" duration-ms="20347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@58be6e8]" started-at="2026-05-07T16:22:31 IST" name="tearDown" finished-at="2026-05-07T16:22:31 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Login Tests -->
+    <test started-at="2026-05-07T16:22:32 IST" name="Register Tests" finished-at="2026-05-07T16:24:59 IST" duration-ms="146877">
+      <class name="tests.RegisterTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:22:32 IST" name="setUp" finished-at="2026-05-07T16:22:36 IST" duration-ms="4684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLogoutUser()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:22:36 IST" name="testLogoutUser" description="TC8: Logout user" finished-at="2026-05-07T16:22:55 IST" duration-ms="18471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogoutUser -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:22:55 IST" name="tearDown" finished-at="2026-05-07T16:22:55 IST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:22:55 IST" name="setUp" finished-at="2026-05-07T16:22:58 IST" duration-ms="2238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterNewUserAndDeleteAccount()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:22:58 IST" name="testRegisterNewUserAndDeleteAccount" description="TC1: Register new user with valid details and delete account" finished-at="2026-05-07T16:23:25 IST" duration-ms="27822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterNewUserAndDeleteAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:26 IST" name="tearDown" finished-at="2026-05-07T16:23:26 IST" duration-ms="260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:26 IST" name="setUp" finished-at="2026-05-07T16:23:30 IST" duration-ms="4106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithEmptyEmail()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:30 IST" name="testRegisterWithEmptyEmail" description="TC5: Register with empty email should not proceed" finished-at="2026-05-07T16:23:33 IST" duration-ms="3230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithEmptyEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:34 IST" name="tearDown" finished-at="2026-05-07T16:23:34 IST" duration-ms="223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:34 IST" name="setUp" finished-at="2026-05-07T16:23:38 IST" duration-ms="4530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithEmptyName()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:38 IST" name="testRegisterWithEmptyName" description="TC4: Register with empty name should not proceed" finished-at="2026-05-07T16:23:41 IST" duration-ms="2758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithEmptyName -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:41 IST" name="tearDown" finished-at="2026-05-07T16:23:41 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:41 IST" name="setUp" finished-at="2026-05-07T16:23:45 IST" duration-ms="3798" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithExistingEmail()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:45 IST" name="testRegisterWithExistingEmail" description="TC3: Register with existing email shows error" finished-at="2026-05-07T16:23:50 IST" duration-ms="4269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithExistingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:50 IST" name="tearDown" finished-at="2026-05-07T16:23:50 IST" duration-ms="157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:50 IST" name="setUp" finished-at="2026-05-07T16:23:55 IST" duration-ms="5217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithExistingEmailShowsError()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:23:55 IST" name="testRegisterWithExistingEmailShowsError" description="TC7: Register user with existing email shows error" finished-at="2026-05-07T16:24:15 IST" duration-ms="19721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithExistingEmailShowsError -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:15 IST" name="tearDown" finished-at="2026-05-07T16:24:15 IST" duration-ms="404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:15 IST" name="setUp" finished-at="2026-05-07T16:24:20 IST" duration-ms="4640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithInvalidEmail()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:20 IST" name="testRegisterWithInvalidEmail" description="TC6: Register with invalid email format should not proceed" finished-at="2026-05-07T16:24:23 IST" duration-ms="2967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithInvalidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:23 IST" name="tearDown" finished-at="2026-05-07T16:24:23 IST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:23 IST" name="setUp" finished-at="2026-05-07T16:24:27 IST" duration-ms="3958" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRegisterWithMrsTitle()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:27 IST" name="testRegisterWithMrsTitle" description="TC2: Register with Mrs title and verify account creation" finished-at="2026-05-07T16:24:58 IST" duration-ms="31021" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href='/delete_account'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56598}, goog:processID: 11776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56598/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 365665896c6b00ca46e66b0fcda87dae]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href='/delete_account'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56598}, goog:processID: 11776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56598/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 365665896c6b00ca46e66b0fcda87dae
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.BasePage.click(BasePage.java:25)
+at pages.HomePage.clickDeleteAccount(HomePage.java:150)
+at tests.RegisterTest.testRegisterWithMrsTitle(RegisterTest.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegisterWithMrsTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RegisterTest@7ac0e420]" started-at="2026-05-07T16:24:58 IST" name="tearDown" finished-at="2026-05-07T16:24:59 IST" duration-ms="225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RegisterTest -->
+    </test> <!-- Register Tests -->
+    <test started-at="2026-05-07T16:24:59 IST" name="Contact Tests" finished-at="2026-05-07T16:26:07 IST" duration-ms="67906">
+      <class name="tests.ContactTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:24:59 IST" name="setUp" finished-at="2026-05-07T16:25:03 IST" duration-ms="4238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testContactUsForm()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:03 IST" name="testContactUsForm" description="TC6: Contact Us Form" finished-at="2026-05-07T16:25:06 IST" duration-ms="3173" status="FAIL">
+          <exception class="org.openqa.selenium.InvalidArgumentException">
+            <message>
+              <![CDATA[invalid argument: File not found : C:\Users\viva\eclipse-workspace\automationexercise\src\test\resources\testfile.txt
+  (Session info: chrome=147.0.7727.138)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b8ae75aab508ee7d647a8c2d970254f6, sendKeysToElement {id=f.AD1972A3EC780DE135898F2E59B17B07.d.ECC56CD334B723BD6CCF63755DDCD806.e.116, value=[Ljava.lang.CharSequence;@3d195d15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56666}, goog:processID: 15116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56666/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b8ae75aab508ee7d647a8c2d970254f6)] -> css selector: input[name='upload_file']]
+Session ID: b8ae75aab508ee7d647a8c2d970254f6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\viva\eclipse-workspace\automationexercise\src\test\resources\testfile.txt
+  (Session info: chrome=147.0.7727.138)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b8ae75aab508ee7d647a8c2d970254f6, sendKeysToElement {id=f.AD1972A3EC780DE135898F2E59B17B07.d.ECC56CD334B723BD6CCF63755DDCD806.e.116, value=[Ljava.lang.CharSequence;@3d195d15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56666}, goog:processID: 15116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56666/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b8ae75aab508ee7d647a8c2d970254f6)] -> css selector: input[name='upload_file']]
+Session ID: b8ae75aab508ee7d647a8c2d970254f6
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+at pages.ContactPage.uploadFile(ContactPage.java:47)
+at tests.ContactTest.testContactUsForm(ContactTest.java:24)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testContactUsForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:06 IST" name="tearDown" finished-at="2026-05-07T16:25:06 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:06 IST" name="setUp" finished-at="2026-05-07T16:25:10 IST" duration-ms="4033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testVerifySubscriptionInHomePage()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:10 IST" name="testVerifySubscriptionInHomePage" description="TC10: Verify Subscription in home page" finished-at="2026-05-07T16:25:11 IST" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifySubscriptionInHomePage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:11 IST" name="tearDown" finished-at="2026-05-07T16:25:11 IST" duration-ms="153" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:11 IST" name="setUp" finished-at="2026-05-07T16:25:16 IST" duration-ms="4767" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testVerifyTestCasesPage()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:25:16 IST" name="testVerifyTestCasesPage" description="TC7: Verify Test Cases Page" finished-at="2026-05-07T16:26:06 IST" duration-ms="50426" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[User not navigated to test cases page successfully expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: User not navigated to test cases page successfully expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at tests.ContactTest.testVerifyTestCasesPage(ContactTest.java:40)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testVerifyTestCasesPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ContactTest@6995bf68]" started-at="2026-05-07T16:26:06 IST" name="tearDown" finished-at="2026-05-07T16:26:07 IST" duration-ms="176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ContactTest -->
+    </test> <!-- Contact Tests -->
+    <test started-at="2026-05-07T16:26:07 IST" name="Place Order Tests" finished-at="2026-05-07T16:27:22 IST" duration-ms="75296">
+      <class name="tests.PlaceOrderLoginCheckoutTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PlaceOrderLoginCheckoutTest@6fb365ed]" started-at="2026-05-07T16:26:07 IST" name="setUp" finished-at="2026-05-07T16:26:11 IST" duration-ms="4439" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPlaceOrderLoginBeforeCheckout()[pri:0, instance:tests.PlaceOrderLoginCheckoutTest@6fb365ed]" started-at="2026-05-07T16:26:11 IST" name="testPlaceOrderLoginBeforeCheckout" finished-at="2026-05-07T16:26:35 IST" duration-ms="24163" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa='login-email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61984}, goog:processID: 12060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61984/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e30d43418a4eb19f6f29f6371977a3eb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa='login-email'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61984}, goog:processID: 12060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61984/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e30d43418a4eb19f6f29f6371977a3eb
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at pages.BasePage.type(BasePage.java:44)
+at pages.LoginPage.login(LoginPage.java:25)
+at tests.PlaceOrderLoginCheckoutTest.testPlaceOrderLoginBeforeCheckout(PlaceOrderLoginCheckoutTest.java:50)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrderLoginBeforeCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PlaceOrderLoginCheckoutTest@6fb365ed]" started-at="2026-05-07T16:26:35 IST" name="tearDown" finished-at="2026-05-07T16:26:36 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.PlaceOrderLoginCheckoutTest -->
+      <class name="tests.PlaceOrderRegisterCheckoutTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.PlaceOrderRegisterCheckoutTest@6e950bcf]" started-at="2026-05-07T16:26:36 IST" name="setUp" finished-at="2026-05-07T16:26:40 IST" duration-ms="4202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPlaceOrderRegisterWhileCheckout()[pri:0, instance:tests.PlaceOrderRegisterCheckoutTest@6e950bcf]" started-at="2026-05-07T16:26:40 IST" name="testPlaceOrderRegisterWhileCheckout" finished-at="2026-05-07T16:27:22 IST" duration-ms="41793" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate option with value: May
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with value: May
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.14'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
+at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
+at pages.BasePage.selectByValue(BasePage.java:84)
+at pages.RegisterPage.selectDateOfBirth(RegisterPage.java:46)
+at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPlaceOrderRegisterWhileCheckout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.PlaceOrderRegisterCheckoutTest@6e950bcf]" started-at="2026-05-07T16:27:22 IST" name="tearDown" finished-at="2026-05-07T16:27:22 IST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.PlaceOrderRegisterCheckoutTest -->
+    </test> <!-- Place Order Tests -->
+    <test started-at="2026-05-07T16:27:22 IST" name="Cart Tests" finished-at="2026-05-07T16:27:54 IST" duration-ms="32381">
+      <class name="tests.RemoveProductsFromCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.RemoveProductsFromCartTest@5a709816]" started-at="2026-05-07T16:27:22 IST" name="setUp" finished-at="2026-05-07T16:27:26 IST" duration-ms="3956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemoveProductsFromCart()[pri:0, instance:tests.RemoveProductsFromCartTest@5a709816]" started-at="2026-05-07T16:27:26 IST" name="testRemoveProductsFromCart" finished-at="2026-05-07T16:27:54 IST" duration-ms="28062" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Product count should decrease by 1 after removing a product expected [0] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Product count should decrease by 1 after removing a product expected [0] but found [1]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at tests.RemoveProductsFromCartTest.testRemoveProductsFromCart(RemoveProductsFromCartTest.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveProductsFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.RemoveProductsFromCartTest@5a709816]" started-at="2026-05-07T16:27:54 IST" name="tearDown" finished-at="2026-05-07T16:27:54 IST" duration-ms="238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.RemoveProductsFromCartTest -->
+    </test> <!-- Cart Tests -->
+    <test started-at="2026-05-07T16:27:54 IST" name="Products Tests" finished-at="2026-05-07T16:28:54 IST" duration-ms="59164">
+      <class name="tests.ProductsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:27:54 IST" name="setUp" finished-at="2026-05-07T16:27:59 IST" duration-ms="4383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNavigateToProductsPage()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:27:59 IST" name="testNavigateToProductsPage" description="TC8: Navigate to products page" finished-at="2026-05-07T16:28:22 IST" duration-ms="23162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigateToProductsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:28:22 IST" name="tearDown" finished-at="2026-05-07T16:28:22 IST" duration-ms="188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:28:22 IST" name="setUp" finished-at="2026-05-07T16:28:26 IST" duration-ms="3897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSearchProduct()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:28:26 IST" name="testSearchProduct" description="TC9: Search product functionality" finished-at="2026-05-07T16:28:53 IST" duration-ms="26693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProduct -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ProductsTest@4fad9bb2]" started-at="2026-05-07T16:28:53 IST" name="tearDown" finished-at="2026-05-07T16:28:54 IST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ProductsTest -->
+    </test> <!-- Products Tests -->
+  </suite> <!-- AutomationExercise Test Suite -->
 </testng-results>

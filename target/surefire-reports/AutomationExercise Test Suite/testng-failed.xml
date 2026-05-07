@@ -4,15 +4,56 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Register Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testRegisterWithMrsTitle"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
+    </classes>
+  </test> <!-- Register Tests(failed) -->
   <test thread-count="5" name="Contact Tests(failed)" verbose="0">
     <classes>
       <class name="tests.ContactTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="testVerifyTestCasesPage"/>
           <include name="testContactUsForm"/>
         </methods>
       </class> <!-- tests.ContactTest -->
     </classes>
   </test> <!-- Contact Tests(failed) -->
+  <test thread-count="5" name="Place Order Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.PlaceOrderRegisterCheckoutTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testPlaceOrderRegisterWhileCheckout"/>
+        </methods>
+      </class> <!-- tests.PlaceOrderRegisterCheckoutTest -->
+      <class name="tests.PlaceOrderLoginCheckoutTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testPlaceOrderLoginBeforeCheckout"/>
+        </methods>
+      </class> <!-- tests.PlaceOrderLoginCheckoutTest -->
+    </classes>
+  </test> <!-- Place Order Tests(failed) -->
+  <test thread-count="5" name="Cart Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.RemoveProductsFromCartTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testRemoveProductsFromCart"/>
+        </methods>
+      </class> <!-- tests.RemoveProductsFromCartTest -->
+    </classes>
+  </test> <!-- Cart Tests(failed) -->
 </suite> <!-- Failed suite [AutomationExercise Test Suite] -->
