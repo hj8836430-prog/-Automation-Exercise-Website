@@ -3,13 +3,25 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.RemoveProductsFromCartTest">
+      <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
+          <include name="testAddProductToCart"/>
+          <include name="testPlaceOrderRegisterBeforeCheckout"/>
+          <include name="testScrollUpUsingArrowButton"/>
+          <include name="testScrollUpWithoutArrowButton"/>
+          <include name="testDownloadInvoiceAfterPurchaseOrder"/>
+          <include name="testVerifyProductQuantityInCart"/>
+          <include name="testViewCartBrandProducts"/>
           <include name="tearDown"/>
+          <include name="testViewProductDetails"/>
+          <include name="testViewCategoryProducts"/>
           <include name="testRemoveProductsFromCart"/>
+          <include name="testSearchProductsAndVerifyCartAfterLogin"/>
+          <include name="testPlaceOrderLoginBeforeCheckout"/>
+          <include name="testCheckoutAndPlaceOrder"/>
         </methods>
-      </class> <!-- tests.RemoveProductsFromCartTest -->
+      </class> <!-- tests.ProductsTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

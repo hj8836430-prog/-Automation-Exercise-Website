@@ -8,54 +8,36 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">AutomationExercise Test Suite</th></tr>
-<tr><td><a href="#t0">Login Tests</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">67,074</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Register Tests</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">146,877</td><td></td><td></td></tr>
-<tr><td><a href="#t2">Contact Tests</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">67,906</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t3">Place Order Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">75,296</td><td></td><td></td></tr>
-<tr><td><a href="#t4">Cart Tests</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">32,381</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t5">Products Tests</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">59,164</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">13</th><th class="num">0</th><th class="num">0</th><th class="num attn">6</th><th class="num">448,698</th><th colspan="2"></th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">13</td><td class="num">567,707</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AutomationExercise Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.LoginTest</td><td><a href="#m0">testLoginUserWithCorrectEmailAndPassword</a></td><td rowspan="1">1778151092615</td><td rowspan="1">25033</td></tr><tr class="passedeven"><td><a href="#m1">testLoginWithInvalidCredentials</a></td><td rowspan="1">1778151122794</td><td rowspan="1">3511</td></tr><tr class="passedeven"><td><a href="#m2">testLogout</a></td><td rowspan="1">1778151131205</td><td rowspan="1">20347</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Register Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m3">testRegisterWithMrsTitle</a></td><td rowspan="1">1778151267717</td><td rowspan="1">31021</td></tr><tr><th colspan="4">Register Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">tests.RegisterTest</td><td><a href="#m4">testLogoutUser</a></td><td rowspan="1">1778151156904</td><td rowspan="1">18471</td></tr><tr class="passedeven"><td><a href="#m5">testRegisterNewUserAndDeleteAccount</a></td><td rowspan="1">1778151178153</td><td rowspan="1">27822</td></tr><tr class="passedeven"><td><a href="#m6">testRegisterWithEmptyEmail</a></td><td rowspan="1">1778151210555</td><td rowspan="1">3230</td></tr><tr class="passedeven"><td><a href="#m7">testRegisterWithEmptyName</a></td><td rowspan="1">1778151218763</td><td rowspan="1">2758</td></tr><tr class="passedeven"><td><a href="#m8">testRegisterWithExistingEmail</a></td><td rowspan="1">1778151225734</td><td rowspan="1">4269</td></tr><tr class="passedeven"><td><a href="#m9">testRegisterWithExistingEmailShowsError</a></td><td rowspan="1">1778151235475</td><td rowspan="1">19721</td></tr><tr class="passedeven"><td><a href="#m10">testRegisterWithInvalidEmail</a></td><td rowspan="1">1778151260377</td><td rowspan="1">2967</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">Contact Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.ContactTest</td><td><a href="#m11">testContactUsForm</a></td><td rowspan="1">1778151303372</td><td rowspan="1">3173</td></tr><tr class="failedeven"><td><a href="#m12">testVerifyTestCasesPage</a></td><td rowspan="1">1778151316268</td><td rowspan="1">50426</td></tr><tr><th colspan="4">Contact Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.ContactTest</td><td><a href="#m13">testVerifySubscriptionInHomePage</a></td><td rowspan="1">1778151310882</td><td rowspan="1">361</td></tr></tbody>
-<tbody id="t3"><tr><th colspan="4">Place Order Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.PlaceOrderLoginCheckoutTest</td><td><a href="#m14">testPlaceOrderLoginBeforeCheckout</a></td><td rowspan="1">1778151371515</td><td rowspan="1">24163</td></tr><tr class="failedodd"><td rowspan="1">tests.PlaceOrderRegisterCheckoutTest</td><td><a href="#m15">testPlaceOrderRegisterWhileCheckout</a></td><td rowspan="1">1778151400270</td><td rowspan="1">41793</td></tr></tbody>
-<tbody id="t4"><tr><th colspan="4">Cart Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.RemoveProductsFromCartTest</td><td><a href="#m16">testRemoveProductsFromCart</a></td><td rowspan="1">1778151446360</td><td rowspan="1">28062</td></tr></tbody>
-<tbody id="t5"><tr><th colspan="4">Products Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.ProductsTest</td><td><a href="#m17">testNavigateToProductsPage</a></td><td rowspan="1">1778151479235</td><td rowspan="1">23162</td></tr><tr class="passedeven"><td><a href="#m18">testSearchProduct</a></td><td rowspan="1">1778151506542</td><td rowspan="1">26693</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="13">tests.ProductsTest</td><td><a href="#m0">testAddProductToCart</a></td><td rowspan="1">1778674615925</td><td rowspan="1">26890</td></tr><tr class="failedeven"><td><a href="#m1">testCheckoutAndPlaceOrder</a></td><td rowspan="1">1778674687200</td><td rowspan="1">52500</td></tr><tr class="failedeven"><td><a href="#m2">testDownloadInvoiceAfterPurchaseOrder</a></td><td rowspan="1">1778674743472</td><td rowspan="1">54336</td></tr><tr class="failedeven"><td><a href="#m3">testPlaceOrderLoginBeforeCheckout</a></td><td rowspan="1">1778674827222</td><td rowspan="1">13661</td></tr><tr class="failedeven"><td><a href="#m4">testPlaceOrderRegisterBeforeCheckout</a></td><td rowspan="1">1778674844415</td><td rowspan="1">46699</td></tr><tr class="failedeven"><td><a href="#m5">testRemoveProductsFromCart</a></td><td rowspan="1">1778674894636</td><td rowspan="1">25590</td></tr><tr class="failedeven"><td><a href="#m6">testScrollUpUsingArrowButton</a></td><td rowspan="1">1778674923684</td><td rowspan="1">10231</td></tr><tr class="failedeven"><td><a href="#m7">testScrollUpWithoutArrowButton</a></td><td rowspan="1">1778674937505</td><td rowspan="1">10207</td></tr><tr class="failedeven"><td><a href="#m8">testSearchProductsAndVerifyCartAfterLogin</a></td><td rowspan="1">1778674979949</td><td rowspan="1">27791</td></tr><tr class="failedeven"><td><a href="#m9">testVerifyProductQuantityInCart</a></td><td rowspan="1">1778675052962</td><td rowspan="1">31846</td></tr><tr class="failedeven"><td><a href="#m10">testViewCartBrandProducts</a></td><td rowspan="1">1778675096584</td><td rowspan="1">24796</td></tr><tr class="failedeven"><td><a href="#m11">testViewCategoryProducts</a></td><td rowspan="1">1778675124587</td><td rowspan="1">12339</td></tr><tr class="failedeven"><td><a href="#m12">testViewProductDetails</a></td><td rowspan="1">1778675140678</td><td rowspan="1">35505</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">tests.ProductsTest</td><td><a href="#m13">testAddReviewOnProduct</a></td><td rowspan="1">1778674647149</td><td rowspan="1">24793</td></tr><tr class="passedeven"><td><a href="#m14">testAddToCartFromRecommendedItems</a></td><td rowspan="1">1778674675864</td><td rowspan="1">7973</td></tr><tr class="passedeven"><td><a href="#m15">testNavigateToProductsPage</a></td><td rowspan="1">1778674801372</td><td rowspan="1">22535</td></tr><tr class="passedeven"><td><a href="#m16">testSearchProduct</a></td><td rowspan="1">1778674949083</td><td rowspan="1">27390</td></tr><tr class="passedeven"><td><a href="#m17">testVerifyAddressDetailsInCheckoutPage</a></td><td rowspan="1">1778675011235</td><td rowspan="1">38291</td></tr><tr class="passedeven"><td><a href="#m18">testVerifySubscriptionInCartPage</a></td><td rowspan="1">1778675091497</td><td rowspan="1">1277</td></tr></tbody>
 </table>
-<h2>Login Tests</h2><h3 id="m0">tests.LoginTest#testLoginUserWithCorrectEmailAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.LoginTest#testLoginWithInvalidCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LoginTest#testLogout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Register Tests</h2><h3 id="m3">tests.RegisterTest#testRegisterWithMrsTitle</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href=&apos;/delete_account&apos;] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56598}, goog:processID: 11776, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56598/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 365665896c6b00ca46e66b0fcda87dae
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.BasePage.click(BasePage.java:25)
-	at pages.HomePage.clickDeleteAccount(HomePage.java:150)
-	at tests.RegisterTest.testRegisterWithMrsTitle(RegisterTest.java:60)
+<h2>Surefire test</h2><h3 id="m0">tests.ProductsTest#testAddProductToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Dono products cart me add nahi hue expected [2] but found [1]
+	at tests.ProductsTest.testAddProductToCart(ProductsTest.java:112)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.RegisterTest#testLogoutUser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.RegisterTest#testRegisterNewUserAndDeleteAccount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">tests.RegisterTest#testRegisterWithEmptyEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.RegisterTest#testRegisterWithEmptyName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.RegisterTest#testRegisterWithExistingEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">tests.RegisterTest#testRegisterWithExistingEmailShowsError</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">tests.RegisterTest#testRegisterWithInvalidEmail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Contact Tests</h2><h3 id="m11">tests.ContactTest#testContactUsForm</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\viva\eclipse-workspace\automationexercise\src\test\resources\testfile.txt
-  (Session info: chrome=147.0.7727.138)
+... Removed 38 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.ProductsTest#testCheckoutAndPlaceOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Order success message visible nahi hai expected [true] but found [false]
+	at tests.ProductsTest.testCheckoutAndPlaceOrder(ProductsTest.java:221)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.ProductsTest#testDownloadInvoiceAfterPurchaseOrder</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Success message not visible expected [true] but found [false]
+	at tests.ProductsTest.testDownloadInvoiceAfterPurchaseOrder(ProductsTest.java:643)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.ProductsTest#testPlaceOrderLoginBeforeCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: &apos;Logged in as username&apos; not visible expected [true] but found [false]
+	at tests.ProductsTest.testPlaceOrderLoginBeforeCheckout(ProductsTest.java:304)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.ProductsTest#testPlaceOrderRegisterBeforeCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=148.0.7778.97)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b8ae75aab508ee7d647a8c2d970254f6, sendKeysToElement {id=f.AD1972A3EC780DE135898F2E59B17B07.d.ECC56CD334B723BD6CCF63755DDCD806.e.116, value=[Ljava.lang.CharSequence;@3d195d15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56666}, goog:processID: 15116, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56666/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (b8ae75aab508ee7d647a8c2d970254f6)] -&gt; css selector: input[name=&apos;upload_file&apos;]]
-Session ID: b8ae75aab508ee7d647a8c2d970254f6
+Command: [671b4f561b217068138d8d928380d65b, clickElement {id=f.9CBE31E2144339EF82B7CE8C67878E04.d.4E100A2911C75040D9D3031553AA37C0.e.247}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63518}, goog:processID: 5640, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63518/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (671b4f561b217068138d8d928380d65b)] -&gt; css selector: a[data-qa=&apos;continue-button&apos;]]
+Session ID: 671b4f561b217068138d8d928380d65b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -64,46 +46,58 @@ Session ID: b8ae75aab508ee7d647a8c2d970254f6
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-	at pages.ContactPage.uploadFile(ContactPage.java:47)
-	at tests.ContactTest.testContactUsForm(ContactTest.java:24)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BasePage.click(BasePage.java:26)
+	at pages.AccountCreatedPage.clickContinue(AccountCreatedPage.java:24)
+	at tests.ProductsTest.testPlaceOrderRegisterBeforeCheckout(ProductsTest.java:250)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">tests.ContactTest#testVerifyTestCasesPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: User not navigated to test cases page successfully expected [true] but found [false]
-	at tests.ContactTest.testVerifyTestCasesPage(ContactTest.java:40)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.ProductsTest#testRemoveProductsFromCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: At least 2 products should be in cart expected [true] but found [false]
+	at tests.ProductsTest.testRemoveProductsFromCart(ProductsTest.java:365)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">tests.ContactTest#testVerifySubscriptionInHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Place Order Tests</h2><h3 id="m14">tests.PlaceOrderLoginCheckoutTest#testPlaceOrderLoginBeforeCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa=&apos;login-email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.ProductsTest#testScrollUpUsingArrowButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: &apos;Full-Fledged practice website for Automation Engineers&apos; text not visible expected [true] but found [false]
+	at tests.ProductsTest.testScrollUpUsingArrowButton(ProductsTest.java:676)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.ProductsTest#testScrollUpWithoutArrowButton</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: &apos;Full-Fledged practice website for Automation Engineers&apos; text not visible expected [true] but found [false]
+	at tests.ProductsTest.testScrollUpWithoutArrowButton(ProductsTest.java:694)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.ProductsTest#testSearchProductsAndVerifyCartAfterLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Products not visible in cart expected [true] but found [false]
+	at tests.ProductsTest.testSearchProductsAndVerifyCartAfterLogin(ProductsTest.java:457)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.ProductsTest#testVerifyProductQuantityInCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Cart me quantity 4 nahi hai. Actual found: Rs. 2000 expected [true] but found [false]
+	at tests.ProductsTest.testVerifyProductQuantityInCart(ProductsTest.java:158)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.ProductsTest#testViewCartBrandProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Brand title mismatch expected [BRAND - POLO PRODUCTS] but found [BRAND -  Polo PRODUCTS]
+	at tests.ProductsTest.testViewCartBrandProducts(ProductsTest.java:419)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.ProductsTest#testViewCategoryProducts</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Category title mismatch expected [true] but found [false]
+	at tests.ProductsTest.testViewCategoryProducts(ProductsTest.java:391)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.ProductsTest#testViewProductDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //p[contains(text(),&apos;Availability:&apos;)] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61984}, goog:processID: 12060, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61984/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e30d43418a4eb19f6f29f6371977a3eb
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60412}, goog:processID: 12888, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60412/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 172c531ad3d300b9ec2a2628497c95fe
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at pages.BasePage.type(BasePage.java:44)
-	at pages.LoginPage.login(LoginPage.java:25)
-	at tests.PlaceOrderLoginCheckoutTest.testPlaceOrderLoginBeforeCheckout(PlaceOrderLoginCheckoutTest.java:50)
+	at pages.BasePage.getText(BasePage.java:51)
+	at pages.ProductDetailPage.getAvailability(ProductDetailPage.java:41)
+	at tests.ProductsTest.testViewProductDetails(ProductsTest.java:88)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">tests.PlaceOrderRegisterCheckoutTest#testPlaceOrderRegisterWhileCheckout</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate option with value: May
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at pages.BasePage.selectByValue(BasePage.java:84)
-	at pages.RegisterPage.selectDateOfBirth(RegisterPage.java:46)
-	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:48)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Cart Tests</h2><h3 id="m16">tests.RemoveProductsFromCartTest#testRemoveProductsFromCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Product count should decrease by 1 after removing a product expected [0] but found [1]
-	at tests.RemoveProductsFromCartTest.testRemoveProductsFromCart(RemoveProductsFromCartTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 37 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Products Tests</h2><h3 id="m17">tests.ProductsTest#testNavigateToProductsPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">tests.ProductsTest#testSearchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.ProductsTest#testAddReviewOnProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.ProductsTest#testAddToCartFromRecommendedItems</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">tests.ProductsTest#testNavigateToProductsPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">tests.ProductsTest#testSearchProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">tests.ProductsTest#testVerifyAddressDetailsInCheckoutPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">tests.ProductsTest#testVerifySubscriptionInCartPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
