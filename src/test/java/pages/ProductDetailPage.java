@@ -8,7 +8,7 @@ public class ProductDetailPage extends BasePage {
     private final By productName = By.cssSelector(".product-information h2");
     private final By productCategory = By.xpath("//p[contains(text(),'Category:')]");
     private final By productPrice = By.cssSelector(".product-information span span");
-    private final By productAvailability = By.xpath("//p[contains(text(),'Availability:')]");
+    private final By productAvailability = By.xpath("//span[contains(text(),'Availability:')] | //p[contains(text(),'Availability:')]");
     private final By productCondition = By.xpath("//p[contains(text(),'Condition:')]");
     private final By productBrand = By.xpath("//p[contains(text(),'Brand:')]");
     private final By addToCartButton = By.cssSelector("button.cart");

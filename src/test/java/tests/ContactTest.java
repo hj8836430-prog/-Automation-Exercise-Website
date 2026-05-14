@@ -28,6 +28,11 @@ public class ContactTest extends BaseTest {
         Assert.assertEquals(contact.getSuccessMessage(), "Success! Your details have been submitted successfully.", "Success message mismatch");
 
         HomePage homeAfter = contact.clickHome();
+        try {
+            Thread.sleep(1000); // Wait for home page to load
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         Assert.assertTrue(homeAfter.isHomePageVisible(), "Not landed to home page successfully");
     }
 

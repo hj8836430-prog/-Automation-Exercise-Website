@@ -4,11 +4,23 @@
   <listeners>
     <listener class-name="listeners.TestListener"/>
   </listeners>
+  <test thread-count="5" name="Login Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testLogout"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
   <test thread-count="5" name="Register Tests(failed)" verbose="0">
     <classes>
       <class name="tests.RegisterTest">
         <methods>
           <include name="setUp"/>
+          <include name="testRegisterWithExistingEmailShowsError"/>
           <include name="tearDown"/>
           <include name="testRegisterWithMrsTitle"/>
         </methods>
@@ -21,7 +33,6 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="testVerifyTestCasesPage"/>
           <include name="testContactUsForm"/>
         </methods>
       </class> <!-- tests.ContactTest -->
@@ -56,4 +67,40 @@
       </class> <!-- tests.RemoveProductsFromCartTest -->
     </classes>
   </test> <!-- Cart Tests(failed) -->
+  <test thread-count="5" name="Products Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.ProductsTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testAddProductToCart"/>
+          <include name="testSearchProduct"/>
+          <include name="testPlaceOrderRegisterBeforeCheckout"/>
+          <include name="testScrollUpUsingArrowButton"/>
+          <include name="testScrollUpWithoutArrowButton"/>
+          <include name="testDownloadInvoiceAfterPurchaseOrder"/>
+          <include name="testVerifyAddressDetailsInCheckoutPage"/>
+          <include name="testVerifyProductQuantityInCart"/>
+          <include name="testViewCartBrandProducts"/>
+          <include name="tearDown"/>
+          <include name="testViewProductDetails"/>
+          <include name="testRemoveProductsFromCart"/>
+          <include name="testViewCategoryProducts"/>
+          <include name="testSearchProductsAndVerifyCartAfterLogin"/>
+          <include name="testPlaceOrderLoginBeforeCheckout"/>
+          <include name="testCheckoutAndPlaceOrder"/>
+        </methods>
+      </class> <!-- tests.ProductsTest -->
+    </classes>
+  </test> <!-- Products Tests(failed) -->
+  <test thread-count="5" name="Subscription Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.SubscriptionTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testSubscriptionOnCartPage"/>
+        </methods>
+      </class> <!-- tests.SubscriptionTest -->
+    </classes>
+  </test> <!-- Subscription Tests(failed) -->
 </suite> <!-- Failed suite [AutomationExercise Test Suite] -->

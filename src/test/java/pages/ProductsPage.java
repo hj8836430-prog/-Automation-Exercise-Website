@@ -66,7 +66,15 @@ public class ProductsPage extends BasePage {
     }
 
     public ProductsPage searchProduct(String productName) {
-        type(searchInput, productName);
+        try {
+            WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInput));
+            searchBox.clear();
+            searchBox.sendKeys(productName);
+        } catch (Exception e) {
+            // Try alternative method
+            WebElement searchBox = driver.findElement(searchInput);
+            ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].value='" + productName + "';", searchBox);
+        }
         click(searchButton);
         return this;
     }

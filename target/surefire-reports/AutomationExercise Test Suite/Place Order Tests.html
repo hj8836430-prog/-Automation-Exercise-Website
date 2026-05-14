@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 14 17:06:37 IST 2026</td>
+<td>Started on:</td><td>Thu May 14 17:26:04 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>88 seconds (88867 ms)</td>
+<tr><td>Total time:</td><td>136 seconds (136193 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,28 +77,55 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout()'><b>testPlaceOrderRegisterWhileCheckout</b><br>Test class: tests.PlaceOrderRegisterCheckoutTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: May
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=148.0.7778.97)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at pages.BasePage.selectByValue(BasePage.java:84)
-	at pages.RegisterPage.selectDateOfBirth(RegisterPage.java:46)
-	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:48)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08df6a732393b42794dd74557286ebf5, clickElement {id=f.8D1A35EA3B9878F79412813C9023160D.d.3ABC5CBDF32FF4B6D80B1FD2787DB2CB.e.1755}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64655}, goog:processID: 9636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64655/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (08df6a732393b42794dd74557286ebf5)] -&gt; css selector: button[data-qa=&apos;signup-button&apos;]]
+Session ID: 08df6a732393b42794dd74557286ebf5
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BasePage.click(BasePage.java:26)
+	at pages.LoginPage.signup(LoginPage.java:34)
+	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:45)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1281233469", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1281233469'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate option with value: May
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1210018191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1210018191'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=148.0.7778.97)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:289)
-	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:194)
-	at pages.BasePage.selectByValue(BasePage.java:84)
-	at pages.RegisterPage.selectDateOfBirth(RegisterPage.java:46)
-	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:48)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08df6a732393b42794dd74557286ebf5, clickElement {id=f.8D1A35EA3B9878F79412813C9023160D.d.3ABC5CBDF32FF4B6D80B1FD2787DB2CB.e.1755}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64655}, goog:processID: 9636, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64655/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (08df6a732393b42794dd74557286ebf5)] -&gt; css selector: button[data-qa=&apos;signup-button&apos;]]
+Session ID: 08df6a732393b42794dd74557286ebf5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BasePage.click(BasePage.java:26)
+	at pages.LoginPage.signup(LoginPage.java:34)
+	at tests.PlaceOrderRegisterCheckoutTest.testPlaceOrderRegisterWhileCheckout(PlaceOrderRegisterCheckoutTest.java:45)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -132,29 +159,29 @@ Driver info: driver.version: unknown
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </pre></div></td>
-<td>38</td>
-<td>tests.PlaceOrderRegisterCheckoutTest@6e950bcf</td></tr>
+<td>71</td>
+<td>tests.PlaceOrderRegisterCheckoutTest@3549bca9</td></tr>
 <tr>
 <td title='tests.PlaceOrderLoginCheckoutTest.testPlaceOrderLoginBeforeCheckout()'><b>testPlaceOrderLoginBeforeCheckout</b><br>Test class: tests.PlaceOrderLoginCheckoutTest</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa=&apos;login-email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52788}, goog:processID: 14704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52788/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e0f9a61c90b10cc2340a6fb3e4c5e86
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50737}, goog:processID: 11396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50737/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1158568addfc229fa44ef8aaff01f81c
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at pages.BasePage.type(BasePage.java:44)
 	at pages.LoginPage.login(LoginPage.java:25)
 	at tests.PlaceOrderLoginCheckoutTest.testPlaceOrderLoginBeforeCheckout(PlaceOrderLoginCheckoutTest.java:50)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace87865777", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace87865777'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa=&apos;login-email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace691171870", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace691171870'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: input[data-qa=&apos;login-email&apos;] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52788}, goog:processID: 14704, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52788/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8e0f9a61c90b10cc2340a6fb3e4c5e86
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50737}, goog:processID: 11396, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50737/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1158568addfc229fa44ef8aaff01f81c
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at pages.BasePage.type(BasePage.java:44)
@@ -193,8 +220,8 @@ Session ID: 8e0f9a61c90b10cc2340a6fb3e4c5e86
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </pre></div></td>
-<td>19</td>
-<td>tests.PlaceOrderLoginCheckoutTest@6fb365ed</td></tr>
+<td>54</td>
+<td>tests.PlaceOrderLoginCheckoutTest@1b835480</td></tr>
 </table><p>
 </body>
 </html>

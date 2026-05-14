@@ -40,12 +40,19 @@
 
     <test name="Products Tests">
         <classes>
-            <class name="tests.ProductsTest">
-                <methods>
-                    <include name="testNavigateToProductsPage"/>
-                    <include name="testSearchProduct"/>
-                </methods>
-            </class>
+            <class name="tests.ProductsTest"/>
+        </classes>
+    </test>
+
+    <test name="Subscription Tests">
+        <classes>
+            <class name="tests.SubscriptionTest"/>
+        </classes>
+    </test>
+
+    <test name="Category Tests">
+        <classes>
+            <class name="tests.ViewCategoryProductsTest"/>
         </classes>
     </test>
 
