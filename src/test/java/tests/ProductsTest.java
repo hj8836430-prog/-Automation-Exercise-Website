@@ -365,9 +365,9 @@ public class ProductsTest extends BaseTest {
         int initialCount = cart.getCartProductCount();
         if (initialCount < 2) {
             // Add more products if needed
-            ProductsPage products = home.clickProducts();
-            products.clickAddToCart(3);
-            products.clickContinueShopping();
+            ProductsPage moreProducts = home.clickProducts();
+            moreProducts.clickAddToCart(3);
+            moreProducts.clickContinueShopping();
             cart = home.clickCart();
             initialCount = cart.getCartProductCount();
         }

@@ -8,7 +8,6 @@ base\BaseTest.class
 pages\PaymentPage.class
 pages\TestCasesPage.class
 pages\CheckoutPage.class
-tests\ProductsTest.class
 pages\AccountDeletedPage.class
 pages\ProductsPage.class
 pages\AccountCreatedPage.class
