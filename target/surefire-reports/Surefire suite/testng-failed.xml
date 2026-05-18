@@ -3,25 +3,21 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.ProductsTest">
+      <class name="tests.LoginTest">
         <methods>
           <include name="setUp"/>
-          <include name="testAddProductToCart"/>
-          <include name="testPlaceOrderRegisterBeforeCheckout"/>
-          <include name="testScrollUpUsingArrowButton"/>
-          <include name="testScrollUpWithoutArrowButton"/>
-          <include name="testDownloadInvoiceAfterPurchaseOrder"/>
-          <include name="testVerifyProductQuantityInCart"/>
-          <include name="testViewCartBrandProducts"/>
           <include name="tearDown"/>
-          <include name="testViewProductDetails"/>
-          <include name="testViewCategoryProducts"/>
-          <include name="testRemoveProductsFromCart"/>
-          <include name="testSearchProductsAndVerifyCartAfterLogin"/>
-          <include name="testPlaceOrderLoginBeforeCheckout"/>
-          <include name="testCheckoutAndPlaceOrder"/>
+          <include name="testLoginWithInvalidCredentials"/>
         </methods>
-      </class> <!-- tests.ProductsTest -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testRegisterWithMrsTitle"/>
+          <include name="testLogoutUser"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 14 17:19:59 IST 2026</td>
+<td>Started on:</td><td>Mon May 18 16:19:44 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>98 seconds (98540 ms)</td>
+<tr><td>Total time:</td><td>69 seconds (69552 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,55 +77,15 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.LoginTest.testLogout()'><b>testLogout</b><br>Test class: tests.LoginTest<br>Test method: TC4: Logout User</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-  (Session info: chrome=148.0.7778.97)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [063aa52cae016ecc6478ba2f7781a999, clickElement {id=f.727CACB047AADACFC80AA6A15566F549.d.2204A99BB7B7D6DB90BEBBBEF3836552.e.184}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49689}, goog:processID: 4540, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49689/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (063aa52cae016ecc6478ba2f7781a999)] -&gt; css selector: a[data-qa=&apos;continue-button&apos;]]
-Session ID: 063aa52cae016ecc6478ba2f7781a999
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.BasePage.click(BasePage.java:26)
-	at pages.AccountCreatedPage.clickContinue(AccountCreatedPage.java:24)
-	at tests.LoginTest.testLogout(LoginTest.java:76)
+<td><div><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
+	at tests.LoginTest.testLogout(LoginTest.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace535624426", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace535624426'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
-  (Session info: chrome=148.0.7778.97)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [063aa52cae016ecc6478ba2f7781a999, clickElement {id=f.727CACB047AADACFC80AA6A15566F549.d.2204A99BB7B7D6DB90BEBBBEF3836552.e.184}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.97, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49689}, goog:processID: 4540, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49689/devtoo..., se:cdpVersion: 148.0.7778.97, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (063aa52cae016ecc6478ba2f7781a999)] -&gt; css selector: a[data-qa=&apos;continue-button&apos;]]
-Session ID: 063aa52cae016ecc6478ba2f7781a999
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at pages.BasePage.click(BasePage.java:26)
-	at pages.AccountCreatedPage.clickContinue(AccountCreatedPage.java:24)
-	at tests.LoginTest.testLogout(LoginTest.java:76)
+... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1478984550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1478984550'><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.LoginTest.testLogout(LoginTest.java:77)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -159,7 +119,7 @@ Session ID: 063aa52cae016ecc6478ba2f7781a999
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </pre></div></td>
-<td>50</td>
+<td>23</td>
 <td>tests.LoginTest@49ff7d8c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -178,7 +138,7 @@ Session ID: 063aa52cae016ecc6478ba2f7781a999
 <tr>
 <td title='tests.LoginTest.testLoginUserWithCorrectEmailAndPassword()'><b>testLoginUserWithCorrectEmailAndPassword</b><br>Test class: tests.LoginTest<br>Test method: TC2: Login User with correct email and password</td>
 <td></td>
-<td>28</td>
+<td>25</td>
 <td>tests.LoginTest@49ff7d8c</td></tr>
 </table><p>
 </body>

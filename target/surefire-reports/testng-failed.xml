@@ -20,24 +20,12 @@
       <class name="tests.RegisterTest">
         <methods>
           <include name="setUp"/>
-          <include name="testRegisterWithExistingEmailShowsError"/>
           <include name="tearDown"/>
-          <include name="testRegisterWithMrsTitle"/>
+          <include name="testRegisterNewUserAndDeleteAccount"/>
         </methods>
       </class> <!-- tests.RegisterTest -->
     </classes>
   </test> <!-- Register Tests(failed) -->
-  <test thread-count="5" name="Contact Tests(failed)" verbose="0">
-    <classes>
-      <class name="tests.ContactTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testContactUsForm"/>
-        </methods>
-      </class> <!-- tests.ContactTest -->
-    </classes>
-  </test> <!-- Contact Tests(failed) -->
   <test thread-count="5" name="Place Order Tests(failed)" verbose="0">
     <classes>
       <class name="tests.PlaceOrderRegisterCheckoutTest">
@@ -56,17 +44,6 @@
       </class> <!-- tests.PlaceOrderLoginCheckoutTest -->
     </classes>
   </test> <!-- Place Order Tests(failed) -->
-  <test thread-count="5" name="Cart Tests(failed)" verbose="0">
-    <classes>
-      <class name="tests.RemoveProductsFromCartTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testRemoveProductsFromCart"/>
-        </methods>
-      </class> <!-- tests.RemoveProductsFromCartTest -->
-    </classes>
-  </test> <!-- Cart Tests(failed) -->
   <test thread-count="5" name="Products Tests(failed)" verbose="0">
     <classes>
       <class name="tests.ProductsTest">
@@ -75,12 +52,11 @@
           <include name="testAddProductToCart"/>
           <include name="testSearchProduct"/>
           <include name="testPlaceOrderRegisterBeforeCheckout"/>
-          <include name="testScrollUpUsingArrowButton"/>
-          <include name="testScrollUpWithoutArrowButton"/>
           <include name="testDownloadInvoiceAfterPurchaseOrder"/>
           <include name="testVerifyAddressDetailsInCheckoutPage"/>
           <include name="testVerifyProductQuantityInCart"/>
           <include name="testViewCartBrandProducts"/>
+          <include name="testAddToCartFromRecommendedItems"/>
           <include name="tearDown"/>
           <include name="testViewProductDetails"/>
           <include name="testRemoveProductsFromCart"/>
