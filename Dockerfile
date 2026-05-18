@@ -24,5 +24,5 @@ COPY . .
 
 RUN mvn clean install -DskipTests
 
-CMD sh -c "mvn test; tail -f /dev/null"
+CMD ["sleep", "infinity"]
 
