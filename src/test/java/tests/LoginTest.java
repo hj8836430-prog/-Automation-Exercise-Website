@@ -7,44 +7,20 @@ import pages.*;
 
 public class LoginTest extends BaseTest {
 
-    private String getUniqueEmail() {
-        return "testuser" + System.currentTimeMillis() + "@mail.com";
-    }
-
-    private void fillRegistrationForm(RegisterPage reg) {
-        reg.selectTitle("Mr").enterPassword("Test@12345")
-           .selectDateOfBirth("10", "5", "1995").selectNewsletter().selectOffers()
-           .fillAddressDetails("Auto", "User", "Test Corp", "123 Main St", "United States",
-               "California", "Los Angeles", "90001", "9876543210");
-    }
-
     @Test(description = "TC2: Login User with correct email and password")
     public void testLoginUserWithCorrectEmailAndPassword() {
-        // First register a user
-        String email = getUniqueEmail();
+        String email = getUniqueEmail("testuser");
         String password = "Test@12345";
 
-        HomePage home = new HomePage(driver);
-        Assert.assertTrue(home.isHomePageVisible(), "Home page not visible");
-
-        RegisterPage reg = home.clickSignupLogin().signup("TestUser", email);
-        fillRegistrationForm(reg);
-        HomePage loggedIn = reg.clickCreateAccount().clickContinue();
+        HomePage loggedIn = registerAndLoginUser("TestUser", email, password);
         Assert.assertTrue(loggedIn.isLoggedIn(), "User not logged in after registration");
 
-        // Logout
         loggedIn.logout();
 
-        // Now login
-        LoginPage loginPage = new HomePage(driver).clickSignupLogin();
-        Assert.assertTrue(loginPage.isLoginPageLoaded(), "'Login to your account' not visible");
-
-        HomePage homeAfterLogin = loginPage.login(email, password);
+        HomePage homeAfterLogin = loginUser(email, password);
         Assert.assertTrue(homeAfterLogin.isLoggedIn(), "'Logged in as username' not visible");
 
-        // Delete account
-        AccountDeletedPage deleted = homeAfterLogin.clickDeleteAccount();
-        Assert.assertTrue(deleted.isAccountDeleted(), "'ACCOUNT DELETED!' not visible");
+        AccountDeletedPage deleted = deleteUserAccount(homeAfterLogin);
         deleted.clickContinue();
     }
 
@@ -64,22 +40,14 @@ public class LoginTest extends BaseTest {
 
     @Test(description = "TC4: Logout User")
     public void testLogout() {
-        // First register a user
-        String email = getUniqueEmail();
+        String email = getUniqueEmail("testuser");
         String password = "Test@12345";
 
-        HomePage home = new HomePage(driver);
-        Assert.assertTrue(home.isHomePageVisible(), "Home page not visible");
-
-        RegisterPage reg = home.clickSignupLogin().signup("TestUser", email);
-        fillRegistrationForm(reg);
-        HomePage loggedIn = reg.clickCreateAccount().clickContinue();
+        HomePage loggedIn = registerAndLoginUser("TestUser", email, password);
         Assert.assertTrue(loggedIn.isLoggedIn(), "User not logged in after registration");
 
-        // Logout
         loggedIn.logout();
 
-        // Verify navigated to login page
         LoginPage loginPage = new LoginPage(driver);
         Assert.assertTrue(loginPage.isLoginPageLoaded(), "User not navigated to login page after logout");
     }

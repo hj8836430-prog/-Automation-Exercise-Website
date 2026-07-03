@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon May 18 16:19:44 IST 2026</td>
+<td>Started on:</td><td>Mon Jun 22 17:09:52 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>69 seconds (69552 ms)</td>
+<tr><td>Total time:</td><td>90 seconds (90848 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,15 +77,55 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='tests.LoginTest.testLogout()'><b>testLogout</b><br>Test class: tests.LoginTest<br>Test method: TC4: Logout User</td>
-<td><div><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
-	at tests.LoginTest.testLogout(LoginTest.java:77)
+<td><div><pre>org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=149.0.7827.155)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd452653052fe0bcff29cbc764b9e356, clearElement {id=f.9A7860BE7AB9CE6A3D388B5DB81FAE07.d.5DA2598346A97AA9FCC04183D11AF4B4.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.155, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 8404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 149.0.7827.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd452653052fe0bcff29cbc764b9e356)] -&gt; css selector: input[data-qa=&apos;signup-email&apos;]]
+Session ID: fd452653052fe0bcff29cbc764b9e356
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at pages.BasePage.type(BasePage.java:52)
+	at pages.LoginPage.signup(LoginPage.java:33)
+	at tests.LoginTest.testLogout(LoginTest.java:74)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 34 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1478984550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1478984550'><pre>java.lang.AssertionError: User not logged in after registration expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at tests.LoginTest.testLogout(LoginTest.java:77)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2040500590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2040500590'><pre>org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=149.0.7827.155)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fd452653052fe0bcff29cbc764b9e356, clearElement {id=f.9A7860BE7AB9CE6A3D388B5DB81FAE07.d.5DA2598346A97AA9FCC04183D11AF4B4.e.78}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.155, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54061}, goog:processID: 8404, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54061/devtoo..., se:cdpVersion: 149.0.7827.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fd452653052fe0bcff29cbc764b9e356)] -&gt; css selector: input[data-qa=&apos;signup-email&apos;]]
+Session ID: fd452653052fe0bcff29cbc764b9e356
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:129)
+	at pages.BasePage.type(BasePage.java:52)
+	at pages.LoginPage.signup(LoginPage.java:33)
+	at tests.LoginTest.testLogout(LoginTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,7 +159,93 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 </pre></div></td>
-<td>23</td>
+<td>5</td>
+<td>tests.LoginTest@49ff7d8c</td></tr>
+<tr>
+<td title='tests.LoginTest.testLoginUserWithCorrectEmailAndPassword()'><b>testLoginUserWithCorrectEmailAndPassword</b><br>Test class: tests.LoginTest<br>Test method: TC2: Login User with correct email and password</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=149.0.7827.155)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b4267212c947dcca828d1cfb107d5cb1, clickElement {id=f.641167256D385AD3AAC773053426B470.d.43E3B594E0F411431543378452283D37.e.146}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.155, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61394}, goog:processID: 22780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61394/devtoo..., se:cdpVersion: 149.0.7827.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b4267212c947dcca828d1cfb107d5cb1)] -&gt; css selector: button[data-qa=&apos;create-account&apos;]]
+Session ID: b4267212c947dcca828d1cfb107d5cb1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BasePage.click(BasePage.java:26)
+	at pages.RegisterPage.clickCreateAccount(RegisterPage.java:80)
+	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1829313709", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1829313709'><pre>org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: chrome=149.0.7827.155)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b4267212c947dcca828d1cfb107d5cb1, clickElement {id=f.641167256D385AD3AAC773053426B470.d.43E3B594E0F411431543378452283D37.e.146}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.155, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\viva\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61394}, goog:processID: 22780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61394/devtoo..., se:cdpVersion: 149.0.7827.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (b4267212c947dcca828d1cfb107d5cb1)] -&gt; css selector: button[data-qa=&apos;create-account&apos;]]
+Session ID: b4267212c947dcca828d1cfb107d5cb1
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BasePage.click(BasePage.java:26)
+	at pages.RegisterPage.clickCreateAccount(RegisterPage.java:80)
+	at tests.LoginTest.testLoginUserWithCorrectEmailAndPassword(LoginTest.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>60</td>
 <td>tests.LoginTest@49ff7d8c</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -133,12 +259,7 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.LoginTest.testLoginWithInvalidCredentials()'><b>testLoginWithInvalidCredentials</b><br>Test class: tests.LoginTest<br>Test method: TC3: Login User with incorrect email and password</td>
 <td></td>
-<td>4</td>
-<td>tests.LoginTest@49ff7d8c</td></tr>
-<tr>
-<td title='tests.LoginTest.testLoginUserWithCorrectEmailAndPassword()'><b>testLoginUserWithCorrectEmailAndPassword</b><br>Test class: tests.LoginTest<br>Test method: TC2: Login User with correct email and password</td>
-<td></td>
-<td>25</td>
+<td>6</td>
 <td>tests.LoginTest@49ff7d8c</td></tr>
 </table><p>
 </body>

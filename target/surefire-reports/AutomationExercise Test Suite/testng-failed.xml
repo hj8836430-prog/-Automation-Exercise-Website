@@ -8,6 +8,7 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
+          <include name="testLoginUserWithCorrectEmailAndPassword"/>
           <include name="setUp"/>
           <include name="testLogout"/>
           <include name="tearDown"/>
@@ -20,8 +21,11 @@
       <class name="tests.RegisterTest">
         <methods>
           <include name="setUp"/>
+          <include name="testRegisterWithExistingEmailShowsError"/>
           <include name="tearDown"/>
           <include name="testRegisterNewUserAndDeleteAccount"/>
+          <include name="testRegisterWithMrsTitle"/>
+          <include name="testLogoutUser"/>
         </methods>
       </class> <!-- tests.RegisterTest -->
     </classes>
@@ -49,8 +53,8 @@
       <class name="tests.ProductsTest">
         <methods>
           <include name="setUp"/>
+          <include name="testAddReviewOnProduct"/>
           <include name="testAddProductToCart"/>
-          <include name="testSearchProduct"/>
           <include name="testPlaceOrderRegisterBeforeCheckout"/>
           <include name="testDownloadInvoiceAfterPurchaseOrder"/>
           <include name="testVerifyAddressDetailsInCheckoutPage"/>
@@ -59,7 +63,6 @@
           <include name="testAddToCartFromRecommendedItems"/>
           <include name="tearDown"/>
           <include name="testViewProductDetails"/>
-          <include name="testRemoveProductsFromCart"/>
           <include name="testViewCategoryProducts"/>
           <include name="testSearchProductsAndVerifyCartAfterLogin"/>
           <include name="testPlaceOrderLoginBeforeCheckout"/>
@@ -79,4 +82,15 @@
       </class> <!-- tests.SubscriptionTest -->
     </classes>
   </test> <!-- Subscription Tests(failed) -->
+  <test thread-count="5" name="Category Tests(failed)" verbose="0">
+    <classes>
+      <class name="tests.ViewCategoryProductsTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testViewCategoryProducts"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- tests.ViewCategoryProductsTest -->
+    </classes>
+  </test> <!-- Category Tests(failed) -->
 </suite> <!-- Failed suite [AutomationExercise Test Suite] -->

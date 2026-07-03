@@ -21,28 +21,13 @@ public class BasePage {
 
     // Wait for element and click
     protected void click(By locator) {
-        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
         try {
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
             element.click();
-            return;
-        } catch (Exception firstException) {
-            // Retry with JavaScript click if default click fails
-            try {
-                WebElement freshElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-                jsClick(freshElement);
-                return;
-            } catch (Exception jsException) {
-                try {
-                    WebElement freshElement = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-                    new org.openqa.selenium.interactions.Actions(driver)
-                            .moveToElement(freshElement)
-                            .click()
-                            .perform();
-                    return;
-                } catch (Exception actionsException) {
-                    throw firstException;
-                }
-            }
+        } catch (Exception e) {
+            // Fallback to JS click if normal click fails
+            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            jsClick(element);
         }
     }
 

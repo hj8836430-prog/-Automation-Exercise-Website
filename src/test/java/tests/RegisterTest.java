@@ -9,31 +9,13 @@ public class RegisterTest extends BaseTest {
 
     @Test(description = "TC1: Register new user with valid details and delete account")
     public void testRegisterNewUserAndDeleteAccount() {
-        String email = "testuser" + System.currentTimeMillis() + "@mail.com";
+        String email = getUniqueEmail("testuser");
 
-        HomePage home = new HomePage(driver);
-        Assert.assertTrue(home.isHomePageVisible(), "Home page not visible");
-
-        RegisterPage reg = home.clickSignupLogin().signup("AutoUser", email);
-        Assert.assertTrue(reg.isEnterAccountInfoVisible(), "Account info form not visible");
-
-        reg.selectTitle("Mr");
-        reg.enterPassword("Test@12345");
-        reg.selectDateOfBirth("10", "5", "1995");
-        reg.selectNewsletter();
-        reg.selectOffers();
-        reg.fillAddressDetails("Auto", "User", "Test Corp", "123 Main St", "United States",
-            "California", "Los Angeles", "90001", "9876543210");
-        AccountCreatedPage created = reg.clickCreateAccount();
-
-        Assert.assertTrue(created.isAccountCreated(), "Account created message not shown");
-
-        HomePage loggedIn = created.clickContinue();
+        HomePage loggedIn = registerAndLoginUser("AutoUser", email, "Test@12345");
         Assert.assertTrue(loggedIn.isLoggedIn(), "User not logged in");
         Assert.assertEquals(loggedIn.getLoggedInUsername(), "AutoUser", "Username mismatch");
 
-        AccountDeletedPage deleted = loggedIn.clickDeleteAccount();
-        Assert.assertTrue(deleted.isAccountDeleted(), "Account deleted message not shown - verify you are on delete account page");
+        AccountDeletedPage deleted = deleteUserAccount(loggedIn);
         deleted.clickContinue();
     }
 
